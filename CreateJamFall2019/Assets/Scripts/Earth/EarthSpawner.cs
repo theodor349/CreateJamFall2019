@@ -20,6 +20,6 @@ public class EarthSpawner : MonoBehaviour
 
     private Vector3 GetSpawnPoint()
     {
-        
+        return Vector3.zero;
     }
 }
