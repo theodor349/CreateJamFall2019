@@ -9,6 +9,7 @@ public class EarthPointer : MonoBehaviour
     
     private void Update()
     {
-        transform.position = new Vector3();
+        var mouseXPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+        transform.position = new Vector3(mouseXPos, yHeight, 0f);
     }
 }
