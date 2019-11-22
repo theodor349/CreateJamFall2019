@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.XR;
 
 public class EarthSpawner : MonoBehaviour
 {
+    public GameObject Prefab;
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -15,11 +18,14 @@ public class EarthSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        Vector3 spawnPoint = GetSpawnPoint();
+        var spawnPoint = GetSpawnPoint();
+        Instantiate(Prefab, spawnPoint, Quaternion.identity);
     }
 
     private Vector3 GetSpawnPoint()
     {
+        
+        
         return Vector3.zero;
     }
 }
