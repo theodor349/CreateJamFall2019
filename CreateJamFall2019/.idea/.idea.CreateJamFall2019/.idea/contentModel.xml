@@ -23,9 +23,13 @@
             <e p="EarthProperties.cs" t="Include" />
             <e p="EarthSpawner.cs" t="Include" />
             <e p="EathRotater.cs" t="Include" />
+            <e p="SpawnableObject.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
+          </e>
+          <e p="Utillities" t="Include">
+            <e p="DestroynOnFallOut.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

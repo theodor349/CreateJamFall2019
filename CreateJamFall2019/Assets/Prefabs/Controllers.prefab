@@ -77,6 +77,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 2
   RotationSpeed: 2
+  ChosenSpawnable: 0
+  SpawnableObjects:
+  - {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
+  - {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c, type: 2}
 --- !u!114 &3570493392006606748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +93,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb23f3b3ca6fb548809d603c8fd6ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
   EarthPointer: {fileID: 0}
-  EarthCenter: {fileID: 0}
+  Map: {fileID: 0}

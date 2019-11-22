@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class EarthPointer : MonoBehaviour
 {
-    public float yHeight = 5f;
-    
+    private float yHeight = 5f;
+
+    private void Start()
+    {
+        yHeight = transform.position.y;
+    }
+
     private void Update()
     {
         var mouseXPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;

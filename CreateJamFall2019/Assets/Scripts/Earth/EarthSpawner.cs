@@ -10,7 +10,9 @@ using Object = UnityEngine.Object;
 public class EarthSpawner : MonoBehaviour
 {
     public Transform EarthPointer;
+    public Transform EarthCenter;
     public Transform Map;
+    public int PlanetLayer = 8;
 
     private EarthProperties _earthProperties;
 
@@ -27,19 +29,27 @@ public class EarthSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
-        var spawnPoint = GetSpawnPoint();
-        if (spawnPoint == Vector3.zero) 
-            return;
-        var go = Instantiate(GetObjectToSpawn(), spawnPoint, Quaternion.identity);
-        go.transform.SetParent(Map);
-        go.transform.Rotate(Vector3.forward, GetRotationOfSpawn(spawnPoint));
+        var obj = GetObjectToSpawn();
+        var spawnPoint = GetSpawnPoint(obj);
+        if (obj.SpawnOnPlanet && spawnPoint == Vector3.zero) return;
+        
+        var go = Instantiate(obj.Prefab, spawnPoint, Quaternion.identity);
+        SetupObject(obj, go);
     }
 
-    private GameObject GetObjectToSpawn()
+    private void SetupObject(SpawnableObject obj, GameObject go)
     {
-        return _earthProperties.SpawnableObjects[0];
+        go.transform.SetParent(Map);
+        if(obj.SpawnOnPlanet)
+            go.transform.Rotate(Vector3.forward, GetRotationOfSpawn(go.transform.position));
     }
 
+    private SpawnableObject GetObjectToSpawn()
+    {
+        return _earthProperties.SpawnableObjects[_earthProperties.ChosenSpawnable];
+    }
+
+    // MAKE SURE THE CENTER OF THE PLANET ALWAYS IS IN (0,0,0)
     private float GetRotationOfSpawn(Vector3 point)
     {
         var rotation = Math.Atan(point.y / point.x) * 180/Math.PI;
@@ -49,10 +59,12 @@ public class EarthSpawner : MonoBehaviour
         return (float)rotation - 90;
     }
 
-    private Vector3 GetSpawnPoint()
+    private Vector3 GetSpawnPoint(SpawnableObject obj)
     {
-        
-        RaycastHit2D hit = Physics2D.Raycast(EarthPointer.position, Vector2.down);
+        if (!obj.SpawnOnPlanet)
+            return EarthPointer.position;
+
+        RaycastHit2D hit = Physics2D.Raycast(EarthPointer.position, Vector2.down, float.MaxValue, 1 << PlanetLayer);
         if (hit.collider != null)
         {
             return hit.point;

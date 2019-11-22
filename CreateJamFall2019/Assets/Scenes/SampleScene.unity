@@ -300,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -332,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 1766605928322915925, guid: 782fa08abf059a744b3335b9abbc3fe6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1766605928322915925, guid: 782fa08abf059a744b3335b9abbc3fe6,
         type: 3}
@@ -448,6 +448,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736624, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed4dad8c7f800c94d95284049e412ccc,
+        type: 3}
+    - target: {fileID: 1832493592743736624, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736638, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbf621fde3a1e4e40876ce4a2c83f835, type: 3}
 --- !u!1001 &2810625742725344893
@@ -538,10 +579,15 @@ PrefabInstance:
       propertyPath: Map
       value: 
       objectReference: {fileID: 1048049089}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: PlanetLayer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
       propertyPath: SpawnableObjects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
@@ -557,7 +603,19 @@ PrefabInstance:
         type: 3}
       propertyPath: SpawnableObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 5347310226649374680, guid: 2a53e82e49e82f0438571f4a3a32994d,
+      objectReference: {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c,
+        type: 2}
+    - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
+      propertyPath: SpawnableObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8,
+        type: 2}
+    - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: SpawnableObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1968d5fcd796f3a4caf682a5d0f4954a, type: 3}
