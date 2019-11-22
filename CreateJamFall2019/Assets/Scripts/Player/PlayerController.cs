@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float runSpeed = 2f;
-    private Rigidbody2D rbody;
-    private Vector3 playerVelocity;
-
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        rbody = GetComponent<Rigidbody2D>();
+        
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        playerVelocity = rbody.velocity;
-
-        if(Input.GetKey(KeyCode.W)) 
-            
+        
     }
 }
