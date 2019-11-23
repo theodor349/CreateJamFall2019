@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
-        gravScale = rbody.gravityScale;
     }
 
     void Update()
@@ -43,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
         if (collisionCount > 0 && wishJump) {
             wishJump = false;
-            canJump = false;
             v.y = jumpSpeed;
         }
 
