@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float stopSpeed = 20f;
     [SerializeField] private float jumpSpeed = 8f;
     [SerializeField] private SpriteRenderer[] spriteRenderers;
+    [SerializeField] private Transform weapon;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
 
@@ -15,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool wishJump;
     private float groundedRadius = 0.2f;
+    private bool isTurnedLeft = true;
 
     private void Awake() {
         rbody = GetComponent<Rigidbody2D>();
@@ -58,9 +61,21 @@ public class PlayerController : MonoBehaviour
 
     private void FlipSprites(bool isLeft)
     {
+        if(isTurnedLeft == isLeft)
+            return;
+        isTurnedLeft = isLeft;
+        
         foreach (var spriteRenderer in spriteRenderers)
         {
             spriteRenderer.flipX = isLeft;
         }
+
+        var s = weapon.localScale;
+        s.x *= -1;
+        weapon.localScale = s;
+
+        var p = weapon.localPosition;
+        p.x *= -1;
+        weapon.localPosition = p;
     }
 }
