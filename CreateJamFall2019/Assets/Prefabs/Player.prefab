@@ -202,6 +202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 2650646668469174545}
+  DigDistance: 1
+  GunPoint: {fileID: 2652658394011170706}
+  HitLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &4122316889451720883
 GameObject:
   m_ObjectHideFlags: 0

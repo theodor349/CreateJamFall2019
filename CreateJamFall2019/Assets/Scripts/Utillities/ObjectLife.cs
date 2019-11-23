@@ -29,6 +29,8 @@ public class ObjectLife : MonoBehaviour
     public void Damage()
     {
         stage--;
+        if (stage < 0)
+            stage = 0;
         SetSprite();
         if(stage == 0)
         {
@@ -36,6 +38,11 @@ public class ObjectLife : MonoBehaviour
             var r = gameObject.AddComponent<RotationFall>();
             r.Rotation = Random.value > 0.5 ? -90f : 90f;
             r.TimeToFall = 0.5f;
+            
+            foreach(Collider2D c in GetComponents<Collider2D>())
+            {
+                c.enabled = false;
+            }
         }
     }
 

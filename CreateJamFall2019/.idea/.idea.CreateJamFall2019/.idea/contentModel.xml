@@ -31,6 +31,7 @@
           </e>
           <e p="Player" t="Include">
             <e p="Digger.cs" t="Include" />
+            <e p="Pistol.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="WeponSwupper.cs" t="Include" />
           </e>
