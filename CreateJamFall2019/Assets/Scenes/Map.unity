@@ -138,8 +138,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddabd562068171429697ac94c91b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapper: {fileID: 0}
+  swapper: {fileID: 89018374}
   waterAmmo: 40
+--- !u!114 &89018374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2650646668469174545, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1000888130}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89018371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa60702406281d94f8d3b005d2c67c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &356301780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 566345819190393659, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
