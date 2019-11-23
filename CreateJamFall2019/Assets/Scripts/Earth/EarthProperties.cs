@@ -21,11 +21,11 @@ public class EarthProperties : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("EarthSelectLeft"))
             PreviousSpawnable();
-        else if(Input.GetKeyDown(KeyCode.E))
+        else if(Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("EarthSelectRight"))
             NextSpawnable();
-
+        
         DoCoolDowns();
     }
 
