@@ -12,7 +12,14 @@ public class EarthProperties : MonoBehaviour
     public int ChosenSpawnable = 0;
     public SpawnableObject[] SpawnableObjects;
     public float[] CoolDowns;
-    
+    private UiPlanetPowerSelector UiPlanetPowerSelector;
+
+
+    void Start()
+    {
+        UiPlanetPowerSelector = UiPlanetPowerSelector.Instance;
+    }
+
     private void Awake()
     {
         Instance = this;
@@ -51,6 +58,7 @@ public class EarthProperties : MonoBehaviour
     {
         ChosenSpawnable++;
         ChosenSpawnable %= SpawnableObjects.Length;
+        UiPlanetPowerSelector.updatePlanetPowerIcons();
     }
     
     public void PreviousSpawnable()
@@ -58,5 +66,7 @@ public class EarthProperties : MonoBehaviour
         ChosenSpawnable--;
         if (ChosenSpawnable < 0)
             ChosenSpawnable = SpawnableObjects.Length - 1;
+        UiPlanetPowerSelector.updatePlanetPowerIcons();
+
     }
 }

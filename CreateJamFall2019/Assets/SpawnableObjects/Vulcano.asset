@@ -16,3 +16,4 @@ MonoBehaviour:
   CoolDown: 2
   SpawnOnPlanet: 1
   Prefab: {fileID: 5347310226649374680, guid: 2a53e82e49e82f0438571f4a3a32994d, type: 3}
+  Icon: {fileID: 21300000, guid: 4cf6534107a6e4b85afe90bcaed8cef9, type: 3}
