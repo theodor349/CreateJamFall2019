@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 10
   stopSpeed: 20
-  jumpSpeed: 8
+  jumpSpeed: 7
   spriteRenderers:
   - {fileID: 9046119370811763657}
   - {fileID: 4439185671809427262}

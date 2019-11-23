@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rbody;
     private bool isGrounded;
     private bool wishJump;
-    private float groundedRadius = 0.2f;
+    private float groundedRadius = 0.1f;
     private bool isTurnedLeft = true;
 
     private void Awake() {
@@ -55,8 +55,11 @@ public class PlayerController : MonoBehaviour
 
         rbody.velocity = v;
 
-        if(rbody.position.y < -20)
-            rbody.position = new Vector2(0, 3);
+        if(rbody.position.y < -20) {
+            rbody.position = new Vector2(0, 7);
+            rbody.velocity = Vector2.zero;
+            Camera.main.GetComponent<CameraShake>().Shake();
+        }
     }
 
     private void FlipSprites(bool isLeft)
