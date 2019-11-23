@@ -225,7 +225,7 @@ MonoBehaviour:
   swapper: {fileID: 2650646668469174545}
   waterBulletPrefab: {fileID: 7417303417130557562, guid: 0b0755b2aeef55748b44b9e7ba215173,
     type: 3}
-  shootCooldown: 0.5
+  shootCooldown: 0.2
   waterAmmo: 40
 --- !u!1 &4122316889451720883
 GameObject:

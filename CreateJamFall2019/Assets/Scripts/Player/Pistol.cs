@@ -21,9 +21,9 @@ public class Pistol : MonoBehaviour {
             if((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextShootTime) {
                 Vector3 pos = transform.position;
                 if (playerController.isTurnedLeft)
-                    pos += playerGraphics.right * 0.5f;
+                    pos += playerGraphics.right * 0.1f;
                 else
-                    pos += playerGraphics.right * -0.5f;
+                    pos += playerGraphics.right * -0.1f;
 
                 nextShootTime = Time.time + shootCooldown;
                 GameObject bullet = Instantiate(waterBulletPrefab, pos, playerGraphics.rotation);
