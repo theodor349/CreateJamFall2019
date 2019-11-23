@@ -18,11 +18,28 @@ public class Vulcano : MonoBehaviour
     public float MaxInterval = 0.4f;
     public FadeInOut Lava;
 
+    [Header("Colliders")] 
+    public GameObject[] Masks;
+    public Collider2D[] Colliders;
+    private int leftInex = 0;
+    private int rightIndex;
+    
     private float coolDown;
 
     private void Start()
     {
         coolDown = CoolDown;
+        rightIndex = Masks.Length - 1;
+
+        foreach (var collider2D1 in Colliders)
+        {
+            collider2D1.enabled = true;
+        }
+
+        foreach (var mask in Masks)
+        {
+            mask.SetActive(false);
+        }
     }
 
     void Update()
@@ -63,17 +80,20 @@ public class Vulcano : MonoBehaviour
         return v * 100f;
     }
 
-    private Vector2 RotateVector(Vector2 v, float angle)
-    {
-        var result = new Vector2(); 
-        result.x = (float)(v.x * Math.Cos(angle) - v.y * Math.Sin(angle));
-        result.x = (float)(v.x * Math.Sin(angle) + v.y * Math.Cos(angle));
-        return result;
-    }
-
     public void Damage(Vector3 point)
     {
         bool isLeftSide = transform.position.x - point.x > 0;
-        
+        if (isLeftSide)
+        {
+            Masks[leftInex].SetActive(true);
+            Colliders[leftInex].enabled = false;
+            leftInex++;
+        }
+        else
+        {
+            Masks[rightIndex].SetActive(true);
+            Colliders[rightIndex].enabled = false;
+            rightIndex--;
+        }
     }
 }
