@@ -30,6 +30,7 @@
             <e p="Vulcano.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
+            <e p="CrateThrow.cs" t="Include" />
             <e p="Digger.cs" t="Include" />
             <e p="Pistol.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
