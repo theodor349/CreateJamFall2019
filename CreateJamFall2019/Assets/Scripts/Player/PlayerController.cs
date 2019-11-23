@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 10f;
     [SerializeField] private float stopSpeed = 20f;
     [SerializeField] private float jumpSpeed = 8f;
+    [SerializeField] private Transform playerGraphics;
     [SerializeField] private SpriteRenderer[] spriteRenderers;
     [SerializeField] private Transform weapon;
     [SerializeField] private Transform groundCheck;
@@ -83,5 +84,14 @@ public class PlayerController : MonoBehaviour
         var p = weapon.localPosition;
         p.x *= -1;
         weapon.localPosition = p;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Fireball")
+        {
+            Vector2 force = playerGraphics.up * 500f;
+            rbody.velocity += force * Time.deltaTime;
+        }
     }
 }

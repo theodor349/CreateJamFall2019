@@ -2,6 +2,7 @@
 using System.Collections;
 using System.ComponentModel;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,6 +24,7 @@ public class Vulcano : MonoBehaviour
     public Collider2D[] Colliders;
     private int leftInex = 0;
     private int rightIndex;
+    private int damage = 0;
     
     private float coolDown;
 
@@ -95,5 +97,16 @@ public class Vulcano : MonoBehaviour
             Colliders[rightIndex].enabled = false;
             rightIndex--;
         }
+
+        damage++;
+
+        if (damage == Masks.Length)
+            StartCoroutine(KillWait());
+    }
+
+    IEnumerator KillWait()
+    {
+        yield return new WaitForSeconds(Random.Range(1f, 1.5f));
+        gameObject.AddComponent<FallIntoGround>();
     }
 }

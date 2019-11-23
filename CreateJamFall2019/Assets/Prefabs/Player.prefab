@@ -174,7 +174,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1967631899}
   groundLayers:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 769
   rbody: {fileID: 0}
   isGrounded: 0
   isTurnedLeft: 1
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acede2ec2ee5304995a6b136e4def11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGraphics: {fileID: 0}
+  playerGraphics: {fileID: 400971035}
   spawnCooldown: 0.5
 --- !u!1 &4122316889451720883
 GameObject:
