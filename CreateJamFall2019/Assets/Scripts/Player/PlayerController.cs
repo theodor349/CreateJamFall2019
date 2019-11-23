@@ -13,9 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
-    private float gravScale;
     private Rigidbody2D rbody;
-    private bool canJump;
     private bool wishJump;
     private int collisionCount;
 
