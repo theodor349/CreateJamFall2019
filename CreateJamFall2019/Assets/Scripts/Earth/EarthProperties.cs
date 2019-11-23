@@ -21,9 +21,9 @@ public class EarthProperties : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("P1LeftSwitch"))
+        if(Input.GetAxisRaw("ScroolWheel") < 0)
             PreviousSpawnable();
-        else if(Input.GetButtonDown("P1RightSwitch"))
+        else if(Input.GetAxisRaw("ScroolWheel") > 0)
             NextSpawnable();
         
         DoCoolDowns();

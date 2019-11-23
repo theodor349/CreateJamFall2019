@@ -32,7 +32,6 @@
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
           </e>
-          <e p="PlayerControlsController.cs" t="Include" />
           <e p="Utillities" t="Include">
             <e p="Despawner.cs" t="Include" />
             <e p="DestroynOnFallOut.cs" t="Include" />

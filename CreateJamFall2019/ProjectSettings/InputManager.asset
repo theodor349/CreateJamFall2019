@@ -38,7 +38,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: P1Up
+    m_Name: P1Jump
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -54,7 +54,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: P1Up
+    m_Name: P1Jump
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -70,7 +70,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: P1Down
+    m_Name: P1ShootDown
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -86,7 +86,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: P1Down
+    m_Name: P1RightStickVertical
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -156,7 +156,7 @@ InputManager:
     negativeButton: 
     positiveButton: q
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: joystick button 4
     gravity: 3
     dead: 0.001
     sensitivity: 3
@@ -166,11 +166,11 @@ InputManager:
     axis: 4
     joyNum: 1
   - serializedVersion: 3
-    m_Name: P1LeftSwitch
+    m_Name: MouseMoveX
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: joystick button 4
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -178,8 +178,8 @@ InputManager:
     sensitivity: 1
     snap: 1
     invert: 0
-    type: 0
-    axis: 4
+    type: 1
+    axis: 0
     joyNum: 1
   - serializedVersion: 3
     m_Name: P1Mine
@@ -198,18 +198,18 @@ InputManager:
     axis: 4
     joyNum: 1
   - serializedVersion: 3
-    m_Name: P1RightSwitch
+    m_Name: ScroolWheel
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: e
+    positiveButton: 
     altNegativeButton: 
-    altPositiveButton: joystick button 5
-    gravity: 3
-    dead: 0.001
-    sensitivity: 3
+    altPositiveButton: 
+    gravity: 0
+    dead: 0
+    sensitivity: 0.1
     snap: 1
     invert: 0
-    type: 0
-    axis: 4
+    type: 1
+    axis: 2
     joyNum: 1
