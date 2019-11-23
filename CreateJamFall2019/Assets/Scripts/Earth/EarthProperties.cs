@@ -21,9 +21,9 @@ public class EarthProperties : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("EarthSelectLeft"))
+        if(Input.GetButtonDown("P1LeftSwitch"))
             PreviousSpawnable();
-        else if(Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("EarthSelectRight"))
+        else if(Input.GetButtonDown("P1RightSwitch"))
             NextSpawnable();
         
         DoCoolDowns();

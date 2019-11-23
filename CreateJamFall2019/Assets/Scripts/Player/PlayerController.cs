@@ -13,23 +13,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     SpriteRenderer spriteRenderer;
 
-    private float gravScale;
     private Rigidbody2D rbody;
-    private bool canJump;
     private bool wishJump;
     private int collisionCount;
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
-        gravScale = rbody.gravityScale;
     }
 
     void Update()
     {
-        wishJump = Input.GetKeyDown(KeyCode.Space);
+        wishJump = Input.GetButtonDown("P1Up");
 
-        Vector2 vel = new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0);
+        Vector2 vel = new Vector2(Input.GetAxis("P1Horizontal") * runSpeed, 0);
         rbody.velocity += vel * Time.deltaTime;
 
         if (vel.x > 0)
@@ -45,7 +42,6 @@ public class PlayerController : MonoBehaviour
 
         if (collisionCount > 0 && wishJump) {
             wishJump = false;
-            canJump = false;
             v.y = jumpSpeed;
         }
 

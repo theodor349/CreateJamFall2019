@@ -6,6 +6,7 @@ using UnityEngine;
 public class EarthPointer : MonoBehaviour
 {
     public float MoveSpeed = 2f;
+    public float MaxMove = 10f;
     private float yHeight = 5f;
 
     private void Start()
@@ -15,9 +16,13 @@ public class EarthPointer : MonoBehaviour
 
     private void Update()
     {
-        //var mouseXPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-        var mouseXPos = transform.position.x;
-        mouseXPos += MoveSpeed * Time.deltaTime * Input.GetAxisRaw("EarthPointHorizontal");
-        transform.position = new Vector3(mouseXPos, yHeight, 0f);
+        var xPos = transform.position.x;
+        xPos += MoveSpeed * Time.deltaTime * Input.GetAxisRaw("P1Horizontal");
+
+        if (xPos > MaxMove)
+            xPos = MaxMove;
+        else if (xPos < -MaxMove)
+            xPos = -MaxMove;
+        transform.position = new Vector3(xPos, yHeight, 0f);
     }
 }
