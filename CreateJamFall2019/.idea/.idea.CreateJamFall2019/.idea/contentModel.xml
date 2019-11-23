@@ -18,6 +18,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="CameraController.cs" t="Include" />
           <e p="Earth" t="Include">
             <e p="EarthPointer.cs" t="Include" />
             <e p="EarthProperties.cs" t="Include" />
@@ -36,6 +37,7 @@
             <e p="Despawner.cs" t="Include" />
             <e p="DestroynOnFallOut.cs" t="Include" />
             <e p="ObjectLife.cs" t="Include" />
+            <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
           </e>

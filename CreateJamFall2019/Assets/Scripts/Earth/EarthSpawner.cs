@@ -24,7 +24,7 @@ public class EarthSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetButton("EarthPlant"))
+        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("P1Up"))
             SpawnObject();
     }
 
