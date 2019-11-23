@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool wishJump;
     private float groundedRadius = 0.1f;
-    private bool isTurnedLeft = true;
+    [HideInInspector]
+    public bool isTurnedLeft = true;
 
     private void Awake() {
         rbody = GetComponent<Rigidbody2D>();
