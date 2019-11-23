@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2af6eb31e4c644d7bd21296c9a8c9b98, type: 3}
-  m_Name: Create
+  m_Name: Tree
   m_EditorClassIdentifier: 
-  Name: Create
-  CoolDown: 0.5
-  SpawnOnPlanet: 0
-  Prefab: {fileID: 5347310226649374680, guid: d2d2b801b14a87e42aeb77c46a7e0169, type: 3}
+  Name: Tree
+  CoolDown: 2
+  SpawnOnPlanet: 1
+  Prefab: {fileID: 726255313542282, guid: 041972e125cd5004e9124ac6b20638d1, type: 3}
   Icon: {fileID: 0}

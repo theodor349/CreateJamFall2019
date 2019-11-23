@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Experimental.XR;
@@ -23,18 +24,21 @@ public class EarthSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetButton("EarthPlant"))
             SpawnObject();
     }
 
     private void SpawnObject()
     {
+        if (!_earthProperties.CanUseSpawnable()) return;
+        
         var obj = GetObjectToSpawn();
         var spawnPoint = GetSpawnPoint(obj);
         if (obj.SpawnOnPlanet && spawnPoint == Vector3.zero) return;
         
         var go = Instantiate(obj.Prefab, spawnPoint, Quaternion.identity);
         SetupObject(obj, go);
+        _earthProperties.UseSpawnable();
     }
 
     private void SetupObject(SpawnableObject obj, GameObject go)

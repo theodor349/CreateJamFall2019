@@ -11,18 +11,40 @@ public class EarthProperties : MonoBehaviour
     public float RotationSpeed = 2f;
     public int ChosenSpawnable = 0;
     public SpawnableObject[] SpawnableObjects;
+    public float[] CoolDowns;
     
     private void Awake()
     {
         Instance = this;
+        CoolDowns = new float[SpawnableObjects.Length];
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("EarthSelectLeft"))
             PreviousSpawnable();
-        else if(Input.GetKeyDown(KeyCode.E))
+        else if(Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("EarthSelectRight"))
             NextSpawnable();
+        
+        DoCoolDowns();
+    }
+
+    public bool CanUseSpawnable()
+    {
+        return CoolDowns[ChosenSpawnable] <= 0;
+    }
+
+    public void UseSpawnable()
+    {
+        CoolDowns[ChosenSpawnable] = SpawnableObjects[ChosenSpawnable].CoolDown;
+    }
+    
+    private void DoCoolDowns()
+    {
+        for (int i = 0; i < CoolDowns.Length; i++)
+        {
+            CoolDowns[i] -= Time.deltaTime;
+        }
     }
 
     public void NextSpawnable()
