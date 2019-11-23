@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        wishJump = Input.GetKeyDown(KeyCode.Space);
+        wishJump = Input.GetButtonDown("P1Up");
 
-        Vector2 vel = new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0);
+        Vector2 vel = new Vector2(Input.GetAxis("P1Horizontal") * runSpeed, 0);
         rbody.velocity += vel * Time.deltaTime;
 
         if (vel.x > 0)
