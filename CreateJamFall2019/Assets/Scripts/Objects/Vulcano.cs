@@ -23,6 +23,7 @@ public class Vulcano : MonoBehaviour
     public Collider2D[] Colliders;
     private int leftInex = 0;
     private int rightIndex;
+    private int damage = 0;
     
     private float coolDown;
 
@@ -95,5 +96,10 @@ public class Vulcano : MonoBehaviour
             Colliders[rightIndex].enabled = false;
             rightIndex--;
         }
+
+        damage++;
+        if(damage == Colliders.Length - 1)
+            return;
+            
     }
 }

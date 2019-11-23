@@ -46,11 +46,6 @@ public class ObjectLife : MonoBehaviour
         }
     }
 
-    public void DamageVulcano(Vector3 point)
-    {
-        
-    }
-
     private void SetSprite()
     {
         _renderer.sprite = Sprites[stage];
