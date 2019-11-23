@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Create
   m_EditorClassIdentifier: 
   Name: Create
-  CoolDown: 0.5
+  CoolDown: 0.2
   SpawnOnPlanet: 0
   Prefab: {fileID: 5347310226649374680, guid: d2d2b801b14a87e42aeb77c46a7e0169, type: 3}
   Icon: {fileID: 21300000, guid: a6e4789f504055e49b800a3ab5e9b74a, type: 3}
