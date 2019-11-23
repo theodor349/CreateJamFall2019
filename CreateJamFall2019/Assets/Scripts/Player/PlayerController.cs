@@ -13,8 +13,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
 
-    private Rigidbody2D rbody;
-    private bool isGrounded;
+    [HideInInspector]
+    public Rigidbody2D rbody;
+    [HideInInspector]
+    public bool isGrounded;
     private bool wishJump;
     private float groundedRadius = 0.1f;
     [HideInInspector]

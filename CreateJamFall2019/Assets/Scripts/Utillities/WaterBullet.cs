@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterBullet : MonoBehaviour {
-    [SerializeField] private float bulletSpeed = 20f;
+    [SerializeField] public float bulletSpeed = 20f;
     [SerializeField] private float lifespan = 5f;
     [HideInInspector] public bool flyLeft;
 
