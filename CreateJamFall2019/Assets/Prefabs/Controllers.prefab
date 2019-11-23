@@ -75,12 +75,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92e13ce419fe3848bd94f949be4fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 2
-  RotationSpeed: 2
+  Radius: 20
+  RotationSpeed: 20
   ChosenSpawnable: 0
   SpawnableObjects:
-  - {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
   - {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c, type: 2}
+  - {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
+  - {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa, type: 2}
+  CoolDowns: []
 --- !u!114 &3570493392006606748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,4 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EarthPointer: {fileID: 0}
+  EarthCenter: {fileID: 0}
   Map: {fileID: 0}
+  PlanetLayer: 8
