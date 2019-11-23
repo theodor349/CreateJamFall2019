@@ -25,6 +25,9 @@
             <e p="EathRotater.cs" t="Include" />
             <e p="SpawnableObject.cs" t="Include" />
           </e>
+          <e p="Objects" t="Include">
+            <e p="Vulcano.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
             <e p="PlayerController.cs" t="Include" />
           </e>

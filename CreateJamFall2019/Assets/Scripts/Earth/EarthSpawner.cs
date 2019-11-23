@@ -29,12 +29,15 @@ public class EarthSpawner : MonoBehaviour
 
     private void SpawnObject()
     {
+        if (!_earthProperties.CanUseSpawnable()) return;
+        
         var obj = GetObjectToSpawn();
         var spawnPoint = GetSpawnPoint(obj);
         if (obj.SpawnOnPlanet && spawnPoint == Vector3.zero) return;
         
         var go = Instantiate(obj.Prefab, spawnPoint, Quaternion.identity);
         SetupObject(obj, go);
+        _earthProperties.UseSpawnable();
     }
 
     private void SetupObject(SpawnableObject obj, GameObject go)
