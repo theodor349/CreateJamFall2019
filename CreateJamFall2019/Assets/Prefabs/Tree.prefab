@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 610120905780603663}
   - component: {fileID: -8332906792683907888}
   - component: {fileID: 4834333710092584392}
-  - component: {fileID: 7742596521571334015}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83d17f2912bd7848bbc51e9bd6a3610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnSpeed: 10
+  SpawnSpeed: 2
 --- !u!114 &4834333710092584392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,21 +109,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9a972ab7e5349234ba18469fe852bf96, type: 3}
   - {fileID: 21300000, guid: f47cb4852e328844ab423a971e29ddc5, type: 3}
   _renderer: {fileID: 8018005935126436714}
---- !u!114 &7742596521571334015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726255313542282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4623e76f485411f4285d2e41e8505c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Life: {fileID: 4834333710092584392}
-  SpawnerTree: {fileID: -8332906792683907888}
-  TimebetweenKill: 5
 --- !u!1 &4428411047876568519
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7647613584122729145}
   - component: {fileID: 8018005935126436714}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
