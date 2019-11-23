@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 10f;
     [SerializeField] private float stopSpeed = 20f;
     [SerializeField] private float jumpSpeed = 8f;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer[] spriteRenderers;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
 
@@ -35,9 +35,9 @@ public class PlayerController : MonoBehaviour
         rbody.velocity += vel * Time.deltaTime;
 
         if (vel.x > 0)
-            spriteRenderer.flipX = true;
+            FlipSprites(true);
         else if (vel.x < 0)
-            spriteRenderer.flipX = false;
+            FlipSprites(false);
 
         Vector2 v = rbody.velocity;
         if (rbody.velocity.x > 0 && vel.x < 0)
@@ -54,5 +54,13 @@ public class PlayerController : MonoBehaviour
 
         if(rbody.position.y < -20)
             rbody.position = new Vector2(0, 3);
+    }
+
+    private void FlipSprites(bool isLeft)
+    {
+        foreach (var spriteRenderer in spriteRenderers)
+        {
+            spriteRenderer.flipX = isLeft;
+        }
     }
 }
