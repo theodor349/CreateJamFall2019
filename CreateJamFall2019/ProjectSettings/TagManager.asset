@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - Planet
-  - Vulcano
-  - 
+  - Player
+  - Mineable
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2664464881
+    locked: 0
+  - name: Planet
+    uniqueID: 270075627
     locked: 0
