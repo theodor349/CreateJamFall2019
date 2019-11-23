@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float runSpeed = 10f;
-    [SerializeField]
-    private float stopSpeed = 20f;
-    [SerializeField]
-    private float jumpSpeed = 8f;
-    [SerializeField]
-    SpriteRenderer spriteRenderer;
+    [SerializeField] private float runSpeed = 10f;
+    [SerializeField] private float stopSpeed = 20f;
+    [SerializeField] private float jumpSpeed = 8f;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayers;
 
     private Rigidbody2D rbody;
+    private bool isGrounded;
     private bool wishJump;
-    private int collisionCount;
+    private float groundedRadius = 0.2f;
 
-    private void Awake()
-    {
+    private void Awake() {
         rbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
+    void Update() {
+        isGrounded = false;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, groundLayers);
+
+        for (int i = 0; i < colliders.Length; i++) {
+            if (colliders[i].gameObject != gameObject) 
+                isGrounded = true;
+        }
+
         wishJump = Input.GetButtonDown("P1Jump");
 
         Vector2 vel = new Vector2(Input.GetAxis("P1Horizontal") * runSpeed, 0);
@@ -40,7 +45,7 @@ public class PlayerController : MonoBehaviour
         else if (rbody.velocity.x < 0 && vel.x > 0)
             v.x += stopSpeed * Time.deltaTime;
 
-        if (collisionCount > 0 && wishJump) {
+        if (isGrounded && wishJump) {
             wishJump = false;
             v.y = jumpSpeed;
         }
@@ -48,18 +53,6 @@ public class PlayerController : MonoBehaviour
         rbody.velocity = v;
 
         if(rbody.position.y < -20)
-        {
             rbody.position = new Vector2(0, 3);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        collisionCount++;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        collisionCount--;
     }
 }
