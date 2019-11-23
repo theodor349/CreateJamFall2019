@@ -1271,9 +1271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44bdbbd838b6fb439305cdcacd8ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSize: 8
+  maxSize: 10
   minSize: 2.5
-  moveSpeed: 1
+  moveSpeed: 2
   sizeSpeed: 1
   mainTransforms:
   - {fileID: 1048049089}
@@ -2522,7 +2522,33 @@ PrefabInstance:
     - target: {fileID: 1766605928322915926, guid: 782fa08abf059a744b3335b9abbc3fe6,
         type: 3}
       propertyPath: MoveSpeed
-      value: 10
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766605927843062457, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766605927843062457, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766605927843062458, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cca13dac923412547b3ca6fb2f59ce09,
+        type: 3}
+    - target: {fileID: 1766605927843062458, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766605927843062458, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782fa08abf059a744b3335b9abbc3fe6, type: 3}

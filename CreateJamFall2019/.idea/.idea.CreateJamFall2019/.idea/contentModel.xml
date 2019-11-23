@@ -35,6 +35,7 @@
           <e p="Utillities" t="Include">
             <e p="Despawner.cs" t="Include" />
             <e p="DestroynOnFallOut.cs" t="Include" />
+            <e p="FadeInOut.cs" t="Include" />
             <e p="ObjectLife.cs" t="Include" />
             <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />

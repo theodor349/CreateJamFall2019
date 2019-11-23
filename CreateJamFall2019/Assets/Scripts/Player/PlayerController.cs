@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour
         }
 
         rbody.velocity = v;
+
+        if(rbody.position.y < -20)
+        {
+            rbody.position = new Vector2(0, 3);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
