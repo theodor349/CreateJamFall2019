@@ -14,6 +14,11 @@ public class FallIntoGround : MonoBehaviour
 
     private void Start()
     {
+        foreach (var spriteRenderer in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            spriteRenderer.sortingLayerID = 0;
+        }
+        
         speed = Distance / FallTime;
     }
 
