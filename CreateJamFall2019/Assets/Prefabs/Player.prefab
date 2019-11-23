@@ -89,6 +89,8 @@ GameObject:
   - component: {fileID: 566345819190393660}
   - component: {fileID: 566345819190393662}
   - component: {fileID: 566345819190393663}
+  - component: {fileID: 2650646668469174545}
+  - component: {fileID: 8725462244426002173}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,12 +167,41 @@ MonoBehaviour:
   jumpSpeed: 7
   spriteRenderers:
   - {fileID: 9046119370811763657}
-  - {fileID: 269174929301200510}
   - {fileID: 4439185671809427262}
+  weapon: {fileID: 2652658394011170706}
   groundCheck: {fileID: 1967631899}
   groundLayers:
     serializedVersion: 2
     m_Bits: 257
+--- !u!114 &2650646668469174545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566345819190393658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa60702406281d94f8d3b005d2c67c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderer: {fileID: 269174929301200510}
+  Gun: {fileID: 21300000, guid: acaa7b3a71f2ab34e91eadf7a012682c, type: 3}
+  Crate: {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
+  isGun: 1
+--- !u!114 &8725462244426002173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566345819190393658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed3b35b75d6eeb4b92d91335c2e86ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 2650646668469174545}
 --- !u!1 &4122316889451720883
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +293,7 @@ GameObject:
   - component: {fileID: 2652658394011170706}
   - component: {fileID: 269174929301200510}
   m_Layer: 0
-  m_Name: MiddleGround
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +308,7 @@ Transform:
   m_GameObject: {fileID: 5400254279644301298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.258, y: -0.032, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400971035}
   m_RootOrder: 2
@@ -322,7 +353,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: acaa7b3a71f2ab34e91eadf7a012682c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.85, y: 0.99666667}
