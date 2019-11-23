@@ -11,9 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float jumpSpeed = 8f;
 
-    private float gravScale;
     private Rigidbody2D rbody;
-    private bool canJump;
     private bool wishJump;
 
     private void Awake()
