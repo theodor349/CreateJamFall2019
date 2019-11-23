@@ -17,7 +17,7 @@ public class EarthPointer : MonoBehaviour
     private void Update()
     {
         var xPos = transform.position.x;
-        xPos += MoveSpeed * Time.deltaTime * Input.GetAxisRaw("P1Horizontal");
+        xPos += MoveSpeed * Time.deltaTime * Input.GetAxisRaw("MouseMoveX");
 
         if (xPos > MaxMove)
             xPos = MaxMove;

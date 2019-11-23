@@ -290,6 +290,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.44
       objectReference: {fileID: 0}
+    - target: {fileID: 566345819190393663, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1160609742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c99c3afbaaefd045ba05e9c9dc845e1, type: 3}
 --- !u!1 &963194225
@@ -398,6 +403,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1832493592358679302}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1160609742 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 400971036, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 774385550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1766605928721941808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 1766605928322915926, guid: 782fa08abf059a744b3335b9abbc3fe6,
         type: 3}
       propertyPath: MoveSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782fa08abf059a744b3335b9abbc3fe6, type: 3}
