@@ -77,7 +77,7 @@ SpriteRenderer:
   m_Size: {x: 0.083333336, y: 0.23666666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2988503849408828051
@@ -347,7 +347,7 @@ SpriteRenderer:
   m_Size: {x: 0.083333336, y: 0.23666666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5347310226649374680
@@ -467,9 +467,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8234065347476832747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6f3580b9b36c124ab8b6ac85d9e5ced, type: 3}
+  m_Script: {fileID: 11500000, guid: 7570a07adfdd25f49b9efc2d049b5e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rendere1: {fileID: 1453734765521704375}
   rendere2: {fileID: 379560113667326477}
-  FadeTime: 0.2
+  FadeTime: 0.1
+  fade: 0
