@@ -19,6 +19,7 @@ public class UiPlanetPowerSelector : MonoBehaviour
     void Start()
     {
         earthProperties = EarthProperties.Instance;
+        updatePlanetPowerIcons();
     }
 
     private void Awake()
@@ -47,20 +48,6 @@ public class UiPlanetPowerSelector : MonoBehaviour
     private void Update()
     {
         Cooldowns();
-        
-        if (earthProperties.ChosenSpawnable == 2)
-        {
-            if(earthProperties.CoolDowns[0] <= 0.01f)
-                rightTimer.text = "";
-            else
-                rightTimer.text = earthProperties.SpawnableObjects[0].CoolDown.ToString();
-        }
-
-        else
-            if(earthProperties.CoolDowns[earthProperties.ChosenSpawnable + 1] <= 0.01f)
-                rightTimer.text = "";
-            else
-                rightTimer.text = earthProperties.CoolDowns[earthProperties.ChosenSpawnable + 1].ToString();
     }
 
     private void Cooldowns()
@@ -71,16 +58,20 @@ public class UiPlanetPowerSelector : MonoBehaviour
         var temp = earthProperties.CoolDowns[index];
         currentTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
 
-        index++;
-        if (index == max)
-            index = 0;
+        index = Next(index, max);
         temp = earthProperties.CoolDowns[index];
         rightTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
 
+        index = Next(index, max);
+        temp = earthProperties.CoolDowns[index];
+        leftTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
+    }
+
+    private int Next(int index, int max)
+    {
         index++;
         if (index == max)
             index = 0;
-        temp = earthProperties.CoolDowns[index];
-        leftTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
+        return index;
     }
 }

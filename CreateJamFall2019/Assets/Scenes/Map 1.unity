@@ -602,6 +602,31 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6167444594884203550, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167444594884203550, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167444594884203550, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167444594884203550, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167444594884203550, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782fa08abf059a744b3335b9abbc3fe6, type: 3}
 --- !u!1001 &1832493592358679302
