@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rbody;
     private bool isGrounded;
     private bool wishJump;
-    private float groundedRadius = 0.2f;
+    private float groundedRadius = 0.1f;
 
     private void Awake() {
         rbody = GetComponent<Rigidbody2D>();
