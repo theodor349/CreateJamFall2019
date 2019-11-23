@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Experimental.XR;
@@ -23,7 +24,7 @@ public class EarthSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetButton("EarthPlant"))
             SpawnObject();
     }
 

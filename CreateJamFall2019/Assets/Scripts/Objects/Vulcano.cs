@@ -58,8 +58,6 @@ public class Vulcano : MonoBehaviour
         v.x = Random.Range(-XSpread, XSpread);
         v.y = Random.Range(YSpeed * 0.25f, YSpeed);
 
-        //v = RotateVector(v, transform.rotation.eulerAngles.z);
-        
         return v * 100f;
     }
 

@@ -384,6 +384,11 @@ PrefabInstance:
       propertyPath: yHeight
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1766605928322915926, guid: 782fa08abf059a744b3335b9abbc3fe6,
+        type: 3}
+      propertyPath: MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782fa08abf059a744b3335b9abbc3fe6, type: 3}
 --- !u!1001 &1832493592358679302
@@ -397,6 +402,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
         type: 3}
@@ -461,21 +481,6 @@ PrefabInstance:
     - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1832493592743736624, guid: dbf621fde3a1e4e40876ce4a2c83f835,
@@ -592,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
       propertyPath: SpawnableObjects.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
@@ -620,7 +625,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SpawnableObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c,
+      objectReference: {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1968d5fcd796f3a4caf682a5d0f4954a, type: 3}
