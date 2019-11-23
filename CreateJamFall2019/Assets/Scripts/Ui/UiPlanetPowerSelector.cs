@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -45,26 +46,8 @@ public class UiPlanetPowerSelector : MonoBehaviour
 
     private void Update()
     {
-        if (earthProperties.ChosenSpawnable == 0)
-        {
-            if (earthProperties.CoolDowns[2] <= 0.01f)
-                leftTimer.text = "";
-            else
-                leftTimer.text = earthProperties.CoolDowns[2].ToString();
-
-        }
-
-        else
-             if (earthProperties.CoolDowns[earthProperties.ChosenSpawnable - 1] <= 0.01f)
-                leftTimer.text = "";
-             else
-                leftTimer.text = earthProperties.CoolDowns[earthProperties.ChosenSpawnable - 1].ToString();
-
-        if(earthProperties.CoolDowns[earthProperties.ChosenSpawnable] <= 0.01f)
-            currentTimer.text = "";
-        else
-            currentTimer.text = earthProperties.CoolDowns.ToString();
-
+        Cooldowns();
+        
         if (earthProperties.ChosenSpawnable == 2)
         {
             if(earthProperties.CoolDowns[0] <= 0.01f)
@@ -78,5 +61,26 @@ public class UiPlanetPowerSelector : MonoBehaviour
                 rightTimer.text = "";
             else
                 rightTimer.text = earthProperties.CoolDowns[earthProperties.ChosenSpawnable + 1].ToString();
+    }
+
+    private void Cooldowns()
+    {
+        int index = earthProperties.ChosenSpawnable;
+        int max = earthProperties.CoolDowns.Length;
+
+        var temp = earthProperties.CoolDowns[index];
+        currentTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
+
+        index++;
+        if (index == max)
+            index = 0;
+        temp = earthProperties.CoolDowns[index];
+        rightTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
+
+        index++;
+        if (index == max)
+            index = 0;
+        temp = earthProperties.CoolDowns[index];
+        leftTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
     }
 }
