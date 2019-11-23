@@ -41,8 +41,8 @@ InputManager:
     m_Name: P1Up
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: w
-    positiveButton: 
+    negativeButton: 
+    positiveButton: w
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
