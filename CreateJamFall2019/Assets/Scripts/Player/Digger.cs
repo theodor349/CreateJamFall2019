@@ -20,15 +20,18 @@ public class Digger : MonoBehaviour
 
     private void Mine()
     {
-        var c =GetCollider();
-        if (c == null)
+        var hit = GetHit();
+        if (hit.collider == null)
             return;
         
-        c.GetComponent<ObjectLife>().Damage();
+        if(hit.transform.tag.Equals("Vulcano"))
+            hit.transform.GetComponent<Vulcano>().Damage(hit.point);
+        else 
+            hit.transform.GetComponent<ObjectLife>().Damage();
     }
 
-    private Collider2D GetCollider()
+    private RaycastHit2D GetHit()
     {
-        return Physics2D.Raycast(GunPoint.position, transform.right, DigDistance, HitLayer).collider;
+        return Physics2D.Raycast(GunPoint.position, transform.right, DigDistance, HitLayer);
     }
 }

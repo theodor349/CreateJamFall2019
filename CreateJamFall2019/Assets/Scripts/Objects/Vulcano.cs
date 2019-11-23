@@ -70,4 +70,10 @@ public class Vulcano : MonoBehaviour
         result.x = (float)(v.x * Math.Sin(angle) + v.y * Math.Cos(angle));
         return result;
     }
+
+    public void Damage(Vector3 point)
+    {
+        bool isLeftSide = transform.position.x - point.x > 0;
+        
+    }
 }

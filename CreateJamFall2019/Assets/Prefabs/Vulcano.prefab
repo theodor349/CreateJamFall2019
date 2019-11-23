@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 6539538172865852421}
   m_Layer: 9
   m_Name: Vulcano
-  m_TagString: Untagged
+  m_TagString: Vulcano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
