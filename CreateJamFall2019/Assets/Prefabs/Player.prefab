@@ -174,7 +174,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1967631899}
   groundLayers:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 769
   rbody: {fileID: 0}
   isGrounded: 0
   isTurnedLeft: 1
