@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,6 +19,7 @@ public class UiPlanetPowerSelector : MonoBehaviour
     void Start()
     {
         earthProperties = EarthProperties.Instance;
+        updatePlanetPowerIcons();
     }
 
     private void Awake()
@@ -45,38 +47,31 @@ public class UiPlanetPowerSelector : MonoBehaviour
 
     private void Update()
     {
-        if (earthProperties.ChosenSpawnable == 0)
-        {
-            if (earthProperties.CoolDowns[2] <= 0.01f)
-                leftTimer.text = "";
-            else
-                leftTimer.text = earthProperties.CoolDowns[2].ToString();
+        Cooldowns();
+    }
 
-        }
+    private void Cooldowns()
+    {
+        int index = earthProperties.ChosenSpawnable;
+        int max = earthProperties.CoolDowns.Length;
 
-        else
-             if (earthProperties.CoolDowns[earthProperties.ChosenSpawnable - 1] <= 0.01f)
-                leftTimer.text = "";
-             else
-                leftTimer.text = earthProperties.CoolDowns[earthProperties.ChosenSpawnable - 1].ToString();
+        var temp = earthProperties.CoolDowns[index];
+        currentTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
 
-        if(earthProperties.CoolDowns[earthProperties.ChosenSpawnable] <= 0.01f)
-            currentTimer.text = "";
-        else
-            currentTimer.text = earthProperties.CoolDowns.ToString();
+        index = Next(index, max);
+        temp = earthProperties.CoolDowns[index];
+        rightTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
 
-        if (earthProperties.ChosenSpawnable == 2)
-        {
-            if(earthProperties.CoolDowns[0] <= 0.01f)
-                rightTimer.text = "";
-            else
-                rightTimer.text = earthProperties.SpawnableObjects[0].CoolDown.ToString();
-        }
+        index = Next(index, max);
+        temp = earthProperties.CoolDowns[index];
+        leftTimer.text = temp <= 0.01f ? "" : temp.ToString("0.0");
+    }
 
-        else
-            if(earthProperties.CoolDowns[earthProperties.ChosenSpawnable + 1] <= 0.01f)
-                rightTimer.text = "";
-            else
-                rightTimer.text = earthProperties.CoolDowns[earthProperties.ChosenSpawnable + 1].ToString();
+    private int Next(int index, int max)
+    {
+        index++;
+        if (index == max)
+            index = 0;
+        return index;
     }
 }
