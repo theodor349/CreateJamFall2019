@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8727866539804315571}
   - component: {fileID: 1453734765521704375}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX Lava (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4634848449262434696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EruptPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7404637629428400202}
   - component: {fileID: 3816007179122262317}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1428866542451454980}
   - component: {fileID: 1598833044546548185}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712508790572298316}
   - component: {fileID: 379560113667326477}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX Lava (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 4471317559271756879}
   - component: {fileID: 7696392631560064808}
   - component: {fileID: 6539538172865852421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vulcano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380435313337319842}
   - component: {fileID: 5869340839447313564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,4 +473,5 @@ MonoBehaviour:
   Renderers:
   - {fileID: 1453734765521704375}
   - {fileID: 379560113667326477}
-  fadeSpeed: 2
+  fadeInSpeed: 4
+  fadeOutSpeed: 2

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7404637629428400202}
   - component: {fileID: 3816007179122262317}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,8 @@ GameObject:
   - component: {fileID: -5365999106161264203}
   - component: {fileID: 324943899016031094}
   - component: {fileID: 7130391579221832101}
-  m_Layer: 0
+  - component: {fileID: 6506364627812100579}
+  m_Layer: 10
   m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,3 +174,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b4d7def3ee3cf4a9d4c06e6066a05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6506364627812100579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347310226649374680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2177e6fc39f4e84e9d5af91ddff4202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stages: 2
+  Sprites:
+  - {fileID: 21300000, guid: 7f457ab18ea2c654f9b6157c20b91967, type: 3}
+  - {fileID: 21300000, guid: a6e4789f504055e49b800a3ab5e9b74a, type: 3}
+  _renderer: {fileID: 3816007179122262317}
