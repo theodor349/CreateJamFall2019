@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rbody;
     private bool canJump;
     private bool wishJump;
+    private int collisionCount;
 
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
         else if (rbody.velocity.x < 0 && vel.x > 0)
             v.x += stopSpeed * Time.deltaTime;
 
-        if (canJump && wishJump) {
+        if (collisionCount > 0 && wishJump) {
             wishJump = false;
             canJump = false;
             v.y = jumpSpeed;
@@ -53,6 +54,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        canJump = true;
+        collisionCount++;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collisionCount--;
     }
 }
