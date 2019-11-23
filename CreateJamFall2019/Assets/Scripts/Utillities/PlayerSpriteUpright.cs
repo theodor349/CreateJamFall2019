@@ -6,7 +6,6 @@ public class PlayerSpriteUpright : MonoBehaviour
 {
     private Rigidbody2D rbody;
 
-
     private void Awake()
     {
         rbody = transform.root.GetComponent<Rigidbody2D>();
