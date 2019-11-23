@@ -126,3 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   lifespan: 5
+  flyLeft: 0

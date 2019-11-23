@@ -6,23 +6,30 @@ using TMPro;
 
 public class UiPlanetPowerSelector : MonoBehaviour
 {
-
+    public static UiPlanetPowerSelector Instance;
     public SpriteRenderer leftPower;
     public TextMeshProUGUI leftTimer;
     public SpriteRenderer rightPower;
     public TextMeshProUGUI rightTimer;
     public SpriteRenderer currentPower;
     public TextMeshProUGUI currentTimer;
+    private EarthProperties earthProperties;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        earthProperties = EarthProperties.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        Instance = this;
     }
+
+    public void updatePlanetPowerIcons()
+    {
+        currentPower.sprite = earthProperties.SpawnableObjects[earthProperties.ChosenSpawnable].Icon;
+
+    }
+
+
 }

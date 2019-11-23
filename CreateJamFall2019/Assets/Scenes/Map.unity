@@ -871,9 +871,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
         type: 3}
+      propertyPath: mainTransforms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
+        type: 3}
       propertyPath: mainTransforms.Array.data[0]
       value: 
-      objectReference: {fileID: 1048049089}
+      objectReference: {fileID: 1713020425}
     - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
         type: 3}
       propertyPath: mainTransforms.Array.data[1]
