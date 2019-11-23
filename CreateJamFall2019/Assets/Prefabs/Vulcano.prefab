@@ -473,6 +473,4 @@ MonoBehaviour:
   Renderers:
   - {fileID: 1453734765521704375}
   - {fileID: 379560113667326477}
-  FadeTime: 0.1
-  FadeIn: 0
-  fade: 0
+  fadeSpeed: 2
