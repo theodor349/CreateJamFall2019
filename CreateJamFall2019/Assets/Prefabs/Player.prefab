@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 2650646668469174545}
-  DigDistance: 1
+  DigDistance: 0.3
   GunPoint: {fileID: 2652658394011170706}
   HitLayer:
     serializedVersion: 2
@@ -225,7 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGraphics: {fileID: 400971035}
-  swapper: {fileID: 2650646668469174545}
   waterBulletPrefab: {fileID: 7417303417130557562, guid: 0b0755b2aeef55748b44b9e7ba215173,
     type: 3}
   shootCooldown: 0.2
@@ -242,8 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGraphics: {fileID: 0}
-  swapper: {fileID: 0}
-  cratePrefab: {fileID: 0}
   spawnCooldown: 0.5
 --- !u!1 &4122316889451720883
 GameObject:
