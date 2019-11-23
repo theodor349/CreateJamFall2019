@@ -403,21 +403,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,6 +466,21 @@ PrefabInstance:
     - target: {fileID: 1832493592594089671, guid: dbf621fde3a1e4e40876ce4a2c83f835,
         type: 3}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832493592743736625, guid: dbf621fde3a1e4e40876ce4a2c83f835,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1832493592743736624, guid: dbf621fde3a1e4e40876ce4a2c83f835,
@@ -568,32 +568,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
-        type: 3}
-      propertyPath: EarthPointer
-      value: 
-      objectReference: {fileID: 677075813}
-    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
-        type: 3}
-      propertyPath: EarthCenter
-      value: 
-      objectReference: {fileID: 689735223}
-    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
-        type: 3}
-      propertyPath: Prefab
-      value: 
-      objectReference: {fileID: 5347310226649374680, guid: 2a53e82e49e82f0438571f4a3a32994d,
-        type: 3}
-    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
-        type: 3}
-      propertyPath: Map
-      value: 
-      objectReference: {fileID: 1048049089}
-    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
-        type: 3}
-      propertyPath: PlanetLayer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2114695472582698421, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
         type: 3}
       propertyPath: SpawnableObjects.Array.size
@@ -627,5 +601,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa,
         type: 2}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: EarthPointer
+      value: 
+      objectReference: {fileID: 677075813}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: EarthCenter
+      value: 
+      objectReference: {fileID: 689735223}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: Prefab
+      value: 
+      objectReference: {fileID: 5347310226649374680, guid: 2a53e82e49e82f0438571f4a3a32994d,
+        type: 3}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 1048049089}
+    - target: {fileID: 3570493392006606748, guid: 1968d5fcd796f3a4caf682a5d0f4954a,
+        type: 3}
+      propertyPath: PlanetLayer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1968d5fcd796f3a4caf682a5d0f4954a, type: 3}
