@@ -9,7 +9,7 @@ public class WeponSwupper : MonoBehaviour
     public Sprite Gun;
     public SpawnableObject Crate;
 
-    private bool isGun = true;
+    public bool isGun = true;
     
     private void Update()
     {
