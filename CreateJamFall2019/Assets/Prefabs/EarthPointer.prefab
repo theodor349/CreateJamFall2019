@@ -143,7 +143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6caa3dd8f077148d7be4562c05762b41, type: 2}
   m_sharedMaterial: {fileID: -8292872487160355289, guid: 6caa3dd8f077148d7be4562c05762b41,
@@ -213,13 +213,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 7841400697962217543}
-    characterCount: 1
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -326,6 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766605928322915925}
   - component: {fileID: 1766605928322915926}
+  - component: {fileID: 6314442755061437844}
   m_Layer: 0
   m_Name: EarthPointer
   m_TagString: Untagged
@@ -365,6 +366,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 2
   MaxMove: 10
+--- !u!114 &6314442755061437844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766605928322915924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9da777809f0648da9f7750586642063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftPower: {fileID: 5726416602087059257}
+  leftTimer: {fileID: 2930146085803725906}
+  rightPower: {fileID: 167652602216717765}
+  rightTimer: {fileID: 7841400697962217543}
+  currentPower: {fileID: 7297011407250382540}
+  currentTimer: {fileID: 6167444594884203550}
 --- !u!1 &2665692466923467516
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6caa3dd8f077148d7be4562c05762b41, type: 2}
   m_sharedMaterial: {fileID: -8292872487160355289, guid: 6caa3dd8f077148d7be4562c05762b41,
@@ -649,13 +668,13 @@ MonoBehaviour:
   m_margin: {x: -0.6018634, y: 0, z: 0, w: -0.61290693}
   m_textInfo:
     textComponent: {fileID: 6167444594884203550}
-    characterCount: 1
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -848,7 +867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cf38b6d14828b4dc6869322f47e65e14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1031,7 +1050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6caa3dd8f077148d7be4562c05762b41, type: 2}
   m_sharedMaterial: {fileID: -8292872487160355289, guid: 6caa3dd8f077148d7be4562c05762b41,
@@ -1101,13 +1120,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2930146085803725906}
-    characterCount: 1
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
