@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 566345819190393660}
   - component: {fileID: 566345819190393662}
   - component: {fileID: 566345819190393663}
+  - component: {fileID: 2650646668469174545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -171,6 +172,21 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 257
+--- !u!114 &2650646668469174545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566345819190393658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa60702406281d94f8d3b005d2c67c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderer: {fileID: 269174929301200510}
+  Gun: {fileID: 21300000, guid: acaa7b3a71f2ab34e91eadf7a012682c, type: 3}
+  Crate: {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
 --- !u!1 &4122316889451720883
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,5 +11,5 @@ public class SpawnableObject : ScriptableObject
     public float CoolDown = 2f;
     public bool SpawnOnPlanet = false;
     public GameObject Prefab;
-    public Image Icon;
+    public Sprite Icon;
 }
