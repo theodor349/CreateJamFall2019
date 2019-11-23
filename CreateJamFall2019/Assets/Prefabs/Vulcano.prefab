@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e852f98138d1b5d44bd6a49f1e4ef00f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea896fab02da0c7409dfa8f07699497f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,12 +339,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39f3aac36be1ef44caae7085f40b84d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc488b913b2d5954086ff89ac85ba234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.083333336, y: 0.23666666}
+  m_Size: {x: 0.36666667, y: 0.95}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   MaxErupt: 5
   MinInterval: 0.2
   MaxInterval: 0.4
-  Lava: {fileID: 8234065347476832747}
+  Lava: {fileID: 5869340839447313564}
 --- !u!70 &6539538172865852421
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -434,14 +434,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380435313337319842}
-  - component: {fileID: 2377108419269100885}
+  - component: {fileID: 5869340839447313564}
   m_Layer: 0
   m_Name: GFX Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1380435313337319842
 Transform:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ Transform:
   m_Father: {fileID: 4471317559271756879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2377108419269100885
+--- !u!114 &5869340839447313564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -470,6 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f3580b9b36c124ab8b6ac85d9e5ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rendere1: {fileID: 1453734765521704375}
-  rendere2: {fileID: 379560113667326477}
-  FadeTime: 0.2
+  Renderers:
+  - {fileID: 1453734765521704375}
+  - {fileID: 379560113667326477}
+  FadeTime: 0.1
+  FadeIn: 0
+  fade: 0

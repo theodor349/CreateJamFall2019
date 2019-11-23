@@ -16,8 +16,8 @@ public class Vulcano : MonoBehaviour
     public int MaxErupt = 5;
     public float MinInterval = 0.2f;
     public float MaxInterval = 0.4f;
-    public GameObject Lava;
-    
+    public FadeInOut Lava;
+
     private float coolDown;
 
     private void Start()
@@ -37,13 +37,13 @@ public class Vulcano : MonoBehaviour
 
     IEnumerator MakeEruptions()
     {
-        Lava.SetActive(true);
+        Lava.StartFade();
         for (int i = 0; i < Random.Range(MinErupt, MaxErupt); i++)
         {
             Erupt();
             yield return new WaitForSeconds(Random.Range(MinInterval, MaxInterval));
         }
-        Lava.SetActive(false);
+        Lava.StopFade();
     }
 
     private void Erupt()
