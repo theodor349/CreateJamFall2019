@@ -15,7 +15,6 @@ public class EarthPointer : MonoBehaviour
 
     private void Update()
     {
-        //var mouseXPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
         var mouseXPos = transform.position.x;
         mouseXPos += MoveSpeed * Time.deltaTime * Input.GetAxisRaw("P1Horizontal");
         transform.position = new Vector3(mouseXPos, yHeight, 0f);
