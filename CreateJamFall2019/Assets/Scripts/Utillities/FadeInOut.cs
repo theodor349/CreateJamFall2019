@@ -6,9 +6,12 @@ using UnityEngine.Serialization;
 
 public class FadeInOut : MonoBehaviour
 {
-    public SpriteRenderer[] Renderers;
-    public float FadeTime = 0.1f;
-    public bool FadeIn;
+
+    [SerializeField] private SpriteRenderer[] Renderers;
+    [SerializeField] private float fadeInSpeed = 4f;
+    [SerializeField] private float fadeOutSpeed = 2f;
+
+    private bool FadeIn;
 
     private void Start()
     {
@@ -20,26 +23,24 @@ public class FadeInOut : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        foreach (var renderer in Renderers)
+        {
+            if (FadeIn)
+                renderer.color = Color.Lerp(renderer.color, Color.white, fadeInSpeed * Time.deltaTime);
+            else
+                renderer.color = Color.Lerp(renderer.color, Color.clear, fadeOutSpeed * Time.deltaTime);
+        }
+    }
+
     public void StartFade()
     {
         FadeIn = true;
-        UpdateSprite();
     }
 
     public void StopFade()
     {
         FadeIn = false;
-        UpdateSprite();
-    }
-    
-    private void UpdateSprite()
-    {
-        foreach (var renderer in Renderers)
-        {
-            if(FadeIn)
-                renderer.color = Color.Lerp(renderer.color, Color.clear, FadeTime);
-            else 
-                renderer.color = Color.Lerp(renderer.color, Color.white, FadeTime);
-        }
     }
 }
