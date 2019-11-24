@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
+using Random = UnityEngine.Random;
 
-public enum Sound {Test}
+public enum Sound {Test, Wood}
 public class AudioController : MonoBehaviour
 {
     public static AudioController Instance;
@@ -14,19 +16,25 @@ public class AudioController : MonoBehaviour
 
     public static void Play(Sound sound)
     {
-        Instance.PlaySound(sound);
+        var s = sound.ToString();
+        if (sound == Sound.Wood)
+            s += ((int)Random.Range(1, 3)).ToString();
+            
+        Debug.Log(s);
+        Instance.PlaySound(s);
     }
     
     private void Start()
     {
+        Instance = this;
         LoadSounds();
-        PlaySound(Sound.Test);
+        Play(Sound.Test);
     }
 
-    private void PlaySound(Sound sound)
+    private void PlaySound(string sound)
     {
         var a = speakers[GetSpeaker()];
-        a.clip = clips[sound.ToString()];
+        a.clip = clips[sound];
         a.Play();
     }
 

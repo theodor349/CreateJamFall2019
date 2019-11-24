@@ -54,6 +54,7 @@
             <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />
             <e p="ScoreController.cs" t="Include" />
+            <e p="SpawnDelay.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
             <e p="WaterBullet.cs" t="Include" />
           </e>
