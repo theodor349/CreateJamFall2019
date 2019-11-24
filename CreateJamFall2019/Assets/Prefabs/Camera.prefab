@@ -104,7 +104,6 @@ MonoBehaviour:
   mainTransforms:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &6118319124259015138
 MonoBehaviour:
   m_ObjectHideFlags: 0

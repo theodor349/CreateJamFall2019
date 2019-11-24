@@ -52,3 +52,6 @@ TagManager:
   - name: Planet
     uniqueID: 4082258781
     locked: 0
+  - name: Face
+    uniqueID: 985961375
+    locked: 0

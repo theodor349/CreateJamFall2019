@@ -11,6 +11,7 @@ public class Digger : MonoBehaviour
     public float DigDistance = 1f;
     public Transform GunPoint;
     public LayerMask HitLayer;
+    public bool IsPlayer1;
 
     [SerializeField] private float mineRate = 0.5f;
     private float nextMineTime;
@@ -19,10 +20,21 @@ public class Digger : MonoBehaviour
     {
         if (weapon.currentItem == Item.Pickaxe)
         {
-            if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
+            if (IsPlayer1)
             {
-                nextMineTime = Time.time + mineRate;
-                Mine();
+                if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
+                {
+                    nextMineTime = Time.time + mineRate;
+                    Mine();
+                }
+            }
+            else
+            {
+                if ((Input.GetButtonDown("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextMineTime)
+                {
+                    nextMineTime = Time.time + mineRate;
+                    Mine();
+                }
             }
         }
     }

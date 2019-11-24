@@ -23,6 +23,7 @@
             <e p="EarthProperties.cs" t="Include" />
             <e p="EarthSpawner.cs" t="Include" />
             <e p="EathRotater.cs" t="Include" />
+            <e p="FaceController.cs" t="Include" />
             <e p="SpawnableObject.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
@@ -51,6 +52,7 @@
             <e p="ObjectLife.cs" t="Include" />
             <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />
+            <e p="ScoreController.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
             <e p="WaterBullet.cs" t="Include" />
           </e>

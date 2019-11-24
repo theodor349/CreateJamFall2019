@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform weapon;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
+    [SerializeField] private bool isPlayer1;
 
     private ScoreController scoreController;
 
@@ -43,9 +44,9 @@ public class PlayerController : MonoBehaviour
                 isGrounded = true;
         }
 
-        wishJump = Input.GetButtonDown("P1Jump");
+        wishJump = isPlayer1 ? Input.GetButtonDown("P1Jump") : Input.GetButtonDown("P2Jump");
 
-        Vector2 vel = new Vector2(Input.GetAxis("P1Horizontal") * runSpeed, 0);
+        Vector2 vel = isPlayer1 ? new Vector2(Input.GetAxis("P1Horizontal") * runSpeed, 0) : new Vector2(Input.GetAxis("P2Horizontal") * runSpeed, 0);
         rbody.velocity += vel * Time.deltaTime;
 
         if (vel.x > 0)

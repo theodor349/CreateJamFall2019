@@ -20,6 +20,8 @@ public class EarthProperties : MonoBehaviour
     [Header("Madness")] 
     public int Madness = 0;
     public int NextLevel = 50;
+    public int Level = 0;
+    public static Action<int> LevelUp;
 
     void Start()
     {
@@ -48,8 +50,9 @@ public class EarthProperties : MonoBehaviour
     {
         if (Madness >= NextLevel)
         {
-            Debug.Log("Level Up");
+            Level++;
             Madness = 0;
+            LevelUp?.Invoke(Level);
         }
     }
 
@@ -84,6 +87,10 @@ public class EarthProperties : MonoBehaviour
         if (ChosenSpawnable < 0)
             ChosenSpawnable = SpawnableObjects.Length - 1;
         UiPlanetPowerSelector.updatePlanetPowerIcons();
+    }
 
+    public static void RegistreLevelUpAction(Action<int> action)
+    {
+        LevelUp += action;
     }
 }
