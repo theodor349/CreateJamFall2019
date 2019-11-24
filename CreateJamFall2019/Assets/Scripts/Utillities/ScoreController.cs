@@ -207,7 +207,7 @@ public class ScoreController : MonoBehaviour
 
     void Update()
     {
-        if (currentSeconds < 10) 
+        if (currentSeconds < 60*3) 
             CountRoundTime();
         else 
             EndGame();
