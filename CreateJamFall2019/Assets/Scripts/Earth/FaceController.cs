@@ -47,7 +47,7 @@ public class FaceController : MonoBehaviour
     {
         var pos = (Player1.position + Player2.position) * 0.5f;
 
-        pos = pos.normalized * (EarthProperties.Instance.Radius * 0.7f);
+        pos = pos.normalized * (EarthProperties.Instance.Radius * 0.85f);
 
         return pos;
     }
