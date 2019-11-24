@@ -221,11 +221,11 @@ InputManager:
     positiveButton: joystick button 5
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 0
-    dead: 0
-    sensitivity: 0.1
+    gravity: 3
+    dead: 0.002
+    sensitivity: 3
     snap: 1
     invert: 0
-    type: 1
+    type: 0
     axis: 2
     joyNum: 1
