@@ -12,6 +12,7 @@ public class EarthPointer : MonoBehaviour
     private void Start()
     {
         yHeight = transform.position.y;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
