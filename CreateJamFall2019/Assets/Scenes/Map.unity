@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &283205996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5306200472996331866, guid: 88e242bc60dee9d4f91fc60563f4c603,
+    type: 3}
+  m_PrefabInstance: {fileID: 2035537218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &356301780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 566345819190393659, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
@@ -311,6 +317,11 @@ PrefabInstance:
     - target: {fileID: 566345819190393658, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 566345819190393658, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 566345819190393659, guid: 0c99c3afbaaefd045ba05e9c9dc845e1,
@@ -675,6 +686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 566345819190393658, guid: eef3b95b148c27245b6f6b81986ff6c6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 566345819190393659, guid: eef3b95b148c27245b6f6b81986ff6c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -744,7 +760,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3e4c124f30c9ef14faf8ce25d265a454,
+      objectReference: {fileID: 21300000, guid: 38d3d93bba5873641910814e21005d3a,
         type: 3}
     - target: {fileID: 4439185671809427262, guid: eef3b95b148c27245b6f6b81986ff6c6,
         type: 3}
@@ -1052,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
         type: 3}
       propertyPath: mainTransforms.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
         type: 3}
@@ -1069,5 +1085,10 @@ PrefabInstance:
       propertyPath: mainTransforms.Array.data[2]
       value: 
       objectReference: {fileID: 584837862}
+    - target: {fileID: 6118319124259015137, guid: f4c03f1959b8ed04e9ad03fd459674e9,
+        type: 3}
+      propertyPath: mainTransforms.Array.data[3]
+      value: 
+      objectReference: {fileID: 283205996}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c03f1959b8ed04e9ad03fd459674e9, type: 3}
