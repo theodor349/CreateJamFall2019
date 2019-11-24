@@ -46,7 +46,7 @@ public class ScoreController : MonoBehaviour
 
         if (isPlayer1 == false)
         {
-            if (bestSecondsP2 < currentSeconds || bestSecondsP2 == currentSecondsP2 && bestMiliSecondsP2 < roundMiliP2)
+            if (bestSecondsP2 < currentSecondsP2 || bestSecondsP2 == currentSecondsP2 && bestMiliSecondsP2 < roundMiliP2)
             {
 
                 if (currentSecondsP2 < 10)
@@ -67,7 +67,7 @@ public class ScoreController : MonoBehaviour
 
         else
         {
-            if (bestSecondsP1 < currentSeconds || bestSecondsP1 == currentSecondsP1 && bestMiliSecondsP1 < roundMiliP1)
+            if (bestSecondsP1 < currentSecondsP1 || bestSecondsP1 == currentSecondsP1 && bestMiliSecondsP1 < roundMiliP1)
             {
 
                 if (currentSecondsP1 < 10)
