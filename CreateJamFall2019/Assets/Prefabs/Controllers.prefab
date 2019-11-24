@@ -129,6 +129,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
   - {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa, type: 2}
   CoolDowns: []
+  Madness: 0
+  NextLevel: 6
 --- !u!114 &3570493392006606748
 MonoBehaviour:
   m_ObjectHideFlags: 0
