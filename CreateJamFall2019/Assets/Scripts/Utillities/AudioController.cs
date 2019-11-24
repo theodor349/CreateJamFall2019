@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using Random = UnityEngine.Random;
 
-public enum Sound {Test, Wood}
+public enum Sound {Test, Wood, Crate, Death, Vulcano, Crash, Mine}
 public class AudioController : MonoBehaviour
 {
     public static AudioController Instance;

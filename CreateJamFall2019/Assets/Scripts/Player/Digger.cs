@@ -44,9 +44,12 @@ public class Digger : MonoBehaviour
         var hit = GetHit();
         if (hit.collider == null)
             return;
-        
-        if(hit.transform.tag.Equals("Vulcano"))
+
+        if (hit.transform.tag.Equals("Vulcano"))
+        {
             hit.transform.GetComponent<Vulcano>().Damage(hit.point);
+            AudioController.Play(Sound.Mine);
+        }
         else
         {
             hit.transform.GetComponent<ObjectLife>().Damage();
