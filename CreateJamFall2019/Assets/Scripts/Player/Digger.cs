@@ -22,6 +22,7 @@ public class Digger : MonoBehaviour
             if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
             {
                 nextMineTime = Time.time + mineRate;
+                Mine();
             }
         }
     }
