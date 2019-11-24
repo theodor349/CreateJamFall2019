@@ -19,6 +19,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Earth" t="Include">
+            <e p="EarthColorChanger.cs" t="Include" />
             <e p="EarthPointer.cs" t="Include" />
             <e p="EarthProperties.cs" t="Include" />
             <e p="EarthSpawner.cs" t="Include" />
