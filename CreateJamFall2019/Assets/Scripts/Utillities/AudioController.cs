@@ -20,7 +20,6 @@ public class AudioController : MonoBehaviour
         if (sound == Sound.Wood)
             s += ((int)Random.Range(1, 3)).ToString();
             
-        Debug.Log(s);
         Instance.PlaySound(s);
     }
     

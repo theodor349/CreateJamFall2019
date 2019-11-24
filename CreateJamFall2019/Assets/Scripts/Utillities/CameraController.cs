@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, FindCenter(), moveSpeed * Time.deltaTime);
-        float dist = Vector2.Distance(mainTransforms[1].position, mainTransforms[2].position) / 1.5f;
+        float dist = Vector2.Distance(mainTransforms[0].position, mainTransforms[1].position) / 1.5f;
         if (dist > maxSize) dist = maxSize;
         if (dist < minSize) dist = minSize;
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, dist, sizeSpeed * Time.deltaTime);

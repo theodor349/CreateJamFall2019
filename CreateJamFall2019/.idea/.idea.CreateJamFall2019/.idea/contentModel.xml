@@ -50,6 +50,7 @@
             <e p="DestroynOnFallOut.cs" t="Include" />
             <e p="FadeInOut.cs" t="Include" />
             <e p="FallIntoGround.cs" t="Include" />
+            <e p="GameOver.cs" t="Include" />
             <e p="ObjectLife.cs" t="Include" />
             <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />
