@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92e13ce419fe3848bd94f949be4fb70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 20
+  Radius: 6
   MaxRotaionSpeed: 20
   RotationSpeed: 0
   MaxRotationAcceleration: 1
@@ -130,7 +130,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa, type: 2}
   CoolDowns: []
   Madness: 0
-  NextLevel: 6
+  NextLevel: 1
+  Level: 0
 --- !u!114 &3570493392006606748
 MonoBehaviour:
   m_ObjectHideFlags: 0
