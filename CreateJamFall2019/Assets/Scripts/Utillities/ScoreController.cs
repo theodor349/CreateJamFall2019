@@ -12,18 +12,27 @@ public class ScoreController : MonoBehaviour
     public TextMeshProUGUI scoreTextSeconds;
     public TextMeshProUGUI scoreTextMiliseconds;
 
-    public TextMeshProUGUI bestScoreTextSeconds;
-    public TextMeshProUGUI bestScoreTextMiliseconds;
-    public TextMeshProUGUI bestScoreName;
+    public TextMeshProUGUI bestScoreTextSecondsP1;
+    public TextMeshProUGUI bestScoreTextMilisecondsP1;
 
-    public TextMeshProUGUI currentPlanetPlayerText;
+    public TextMeshProUGUI bestScoreTextSecondsP2;
+    public TextMeshProUGUI bestScoreTextMilisecondsP2;
 
     private double roundTime = 0.0f;
+    private double roundTimeP1 = 0.0f;
+    private double roundTimeP2 = 0.0f;
     private int currentSeconds;
     int roundMili;
 
-    public int bestSeconds;
-    public int bestMiliSeconds;
+    private int roundMiliP1;
+    private int currentSecondsP1;
+    private int roundMiliP2;
+    private int currentSecondsP2;
+
+    public int bestSecondsP1;
+    public int bestMiliSecondsP1;
+    public int bestSecondsP2;
+    public int bestMiliSecondsP2;
 
     private void Awake()
     {
@@ -31,44 +40,90 @@ public class ScoreController : MonoBehaviour
     }
 
 
-    public void CheckForNewScore()
+    public void CheckForNewScore(bool isPlayer1)
     {
 
-        if (bestSeconds < currentSeconds || bestSeconds == currentSeconds && bestMiliSeconds < roundMili)
+
+        if (isPlayer1 == false)
         {
+            if (bestSecondsP2 < currentSeconds || bestSecondsP2 == currentSeconds && bestMiliSecondsP2 < roundMiliP2)
+            {
 
-            if (currentSeconds < 10)
-                bestScoreTextSeconds.text = "00" + currentSeconds.ToString();
+                if (currentSecondsP2 < 10)
+                    bestScoreTextSecondsP2.text = "00" + currentSecondsP2.ToString();
 
-            else if (currentSeconds < 100)
-                bestScoreTextSeconds.text = "0" + currentSeconds.ToString();
+                else if (currentSecondsP2 < 100)
+                    bestScoreTextSecondsP2.text = "0" + currentSecondsP2.ToString();
 
-            else
-                bestScoreTextSeconds.text = currentSeconds.ToString();
+                else
+                    bestScoreTextSecondsP2.text = currentSeconds.ToString();
 
-            bestScoreTextMiliseconds.text = roundMili.ToString();
+                bestScoreTextMilisecondsP2.text = roundMiliP2.ToString();
 
-            bestSeconds = currentSeconds;
-            bestMiliSeconds = roundMili;
+                bestSecondsP2 = currentSeconds;
+                bestMiliSecondsP2 = roundMiliP2;
+            }
         }
+
+        else
+        {
+            if (bestSecondsP1 < currentSeconds || bestSecondsP1 == currentSeconds && bestMiliSecondsP1 < roundMiliP1)
+            {
+
+                if (currentSecondsP1 < 10)
+                    bestScoreTextSecondsP1.text = "00" + currentSecondsP1.ToString();
+
+                else if (currentSecondsP1 < 100)
+                    bestScoreTextSecondsP1.text = "0" + currentSecondsP1.ToString();
+
+                else
+                    bestScoreTextSecondsP1.text = currentSeconds.ToString();
+
+                bestScoreTextMilisecondsP1.text = roundMiliP1.ToString();
+
+                bestSecondsP1 = currentSeconds;
+                bestMiliSecondsP1 = roundMiliP1;
+            }
+        }
+
+
+
+
+
     }
 
-    public void ResetRoundTime()
+    public void ResetRoundTime(bool isPlayer1)
     {
-        roundTime = 0;
-        currentSeconds = 0;
+
+        if (isPlayer1 == false)
+        {
+            roundMiliP2 = 0;
+            currentSecondsP2 = 0;
+        }
+
+        else
+        {
+            roundMiliP1 = 0;
+            currentSecondsP1 = 0;
+        }
+
+
     }
 
 
     private void CountRoundTime()
     {
         roundTime += Time.deltaTime;
+        roundTimeP1 += Time.deltaTime;
+        roundTimeP2 += Time.deltaTime;
 
         roundMili = (int)(roundTime * 1000);
+        roundMiliP1 = (int)(roundTimeP1 * 1000);
+        roundMiliP2 = (int)(roundTimeP2 * 1000);
 
         if ( roundMili >= 1000)
         {
-            currentSeconds ++;
+            currentSeconds++;
             roundTime = 0;
             roundMili = 0;
 
@@ -89,6 +144,20 @@ public class ScoreController : MonoBehaviour
             }
 
 
+        }
+
+        if (roundMiliP1 >= 1000)
+        {
+            currentSecondsP1++;
+            roundTimeP1 = 0;
+            roundMiliP1 = 0;
+        }
+
+        if (roundMiliP2 >= 1000)
+        {
+            currentSecondsP2++;
+            roundTimeP2 = 0;
+            roundMiliP2 = 0;
         }
 
         if (roundMili < 100)

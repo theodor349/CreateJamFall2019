@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
             rbody.velocity = Vector2.zero;
             Camera.main.GetComponent<CameraShake>().Shake();
 
-            scoreController.CheckForNewScore();
-            scoreController.ResetRoundTime();
+            scoreController.CheckForNewScore(isPlayer1);
+            scoreController.ResetRoundTime(isPlayer1);
         }
     }
 
