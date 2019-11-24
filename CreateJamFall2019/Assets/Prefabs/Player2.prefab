@@ -235,7 +235,8 @@ MonoBehaviour:
     type: 3}
   rateOfFire: 0.25
   ammo: 20
-  waterLevel: {fileID: 0}
+  waterLevel1: {fileID: 0}
+  waterLevel2: {fileID: 0}
   isPlayer1: 0
 --- !u!114 &7809841392138205963
 MonoBehaviour:
