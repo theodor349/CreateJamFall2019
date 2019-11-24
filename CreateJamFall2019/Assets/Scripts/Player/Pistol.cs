@@ -17,7 +17,7 @@ public class Pistol : MonoBehaviour {
     private PlayerController playerController;
     private WeponSwupper swapper;
 
-    private float lerpSpeed = 3f;
+    private float lerpSpeed = 1f;
 
 
     private void Awake() {
@@ -27,7 +27,6 @@ public class Pistol : MonoBehaviour {
     }
 
     private void Update() {
-
         if (swapper.currentItem == Item.Pistol) {
             if((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextShootTime && ammo > 0) {
                 Vector3 pos = transform.position;
