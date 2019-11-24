@@ -18,6 +18,8 @@ public class ScoreController : MonoBehaviour
     public TextMeshProUGUI bestScoreTextSecondsP2;
     public TextMeshProUGUI bestScoreTextMilisecondsP2;
 
+    public GameObject gameOverMenu;
+
     private double roundTime = 0.0f;
     private double roundTimeP1 = 0.0f;
     private double roundTimeP2 = 0.0f;
@@ -38,7 +40,6 @@ public class ScoreController : MonoBehaviour
     {
         Instance = this;
     }
-
 
     public void CheckForNewScore(bool isPlayer1)
     {
@@ -170,10 +171,16 @@ public class ScoreController : MonoBehaviour
 
     }
 
-
+    void EndGame()
+    {
+        gameOverMenu.SetActive(true);
+    }
 
     void Update()
     {
-        CountRoundTime();
+        if (currentSeconds < 180) 
+            CountRoundTime();
+        else 
+            EndGame();
     }
 }

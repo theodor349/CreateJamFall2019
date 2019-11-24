@@ -34,13 +34,13 @@ public class Pistol : MonoBehaviour {
         if (swapper.currentItem == Item.Pistol) {
             if (isPlayer1)
             {
-                if((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextShootTime && ammo > 0) {
+                if((Input.GetButton("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextShootTime && ammo > 0) {
                     DoStuff();
                 }
             }
             else
             {
-                if((Input.GetButtonDown("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextShootTime && ammo > 0) {
+                if((Input.GetButton("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextShootTime && ammo > 0) {
                     DoStuff();
                 }
             }

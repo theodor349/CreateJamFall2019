@@ -24,14 +24,14 @@ public class CrateThrow : MonoBehaviour
         {
             if (isPlayer)
             {
-                if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextSpawnTime)
+                if ((Input.GetButton("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextSpawnTime)
                 {
                     DoStuff();
                 }
             }
             else
             {
-                if ((Input.GetButtonDown("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextSpawnTime)
+                if ((Input.GetButton("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextSpawnTime)
                 {
                     DoStuff();
                 }

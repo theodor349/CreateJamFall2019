@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Vulcano
   - Fireball
+  - Crate
   layers:
   - Default
   - TransparentFX

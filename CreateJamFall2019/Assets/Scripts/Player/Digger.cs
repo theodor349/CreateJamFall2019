@@ -22,7 +22,7 @@ public class Digger : MonoBehaviour
         {
             if (IsPlayer1)
             {
-                if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
+                if ((Input.GetButton("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
                 {
                     nextMineTime = Time.time + mineRate;
                     Mine();
@@ -30,7 +30,7 @@ public class Digger : MonoBehaviour
             }
             else
             {
-                if ((Input.GetButtonDown("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextMineTime)
+                if ((Input.GetButton("P2Shoot") || Input.GetAxisRaw("P2Trigger") == 1) && Time.time > nextMineTime)
                 {
                     nextMineTime = Time.time + mineRate;
                     Mine();
