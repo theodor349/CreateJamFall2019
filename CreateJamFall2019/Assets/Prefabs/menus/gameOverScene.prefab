@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2608325591204421161}
   - component: {fileID: 3619295907652754246}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: winnersSeconds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 476889127130441550}
   - component: {fileID: 1013391618966454250}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: winnersName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 3075998606497214624}
   - component: {fileID: 3299879048934129516}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: winnersMiliSeconds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,6 +792,7 @@ GameObject:
   - component: {fileID: 7373237396040937679}
   - component: {fileID: 7373237396040937712}
   - component: {fileID: 7373237396040937713}
+  - component: {fileID: 8610300199703094962}
   m_Layer: 5
   m_Name: gameOverScene
   m_TagString: Untagged
@@ -887,6 +888,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8610300199703094962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373237396040937714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8dbbe25a1594d44ea7eaacfb3f44439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerName: {fileID: 1013391618966454250}
+  winndersSeconds: {fileID: 3619295907652754246}
+  winnersMiliSeconds: {fileID: 3299879048934129516}
+  objectsToHide: []
 --- !u!1 &7373237396059264811
 GameObject:
   m_ObjectHideFlags: 0

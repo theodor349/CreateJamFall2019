@@ -39,6 +39,7 @@ public class ScoreController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        gameOverMenu.SetActive(false);
     }
 
     public void CheckForNewScore(bool isPlayer1)
@@ -173,12 +174,40 @@ public class ScoreController : MonoBehaviour
 
     void EndGame()
     {
+        bool both = true;
+        CheckForNewScore(both);
+
+        both = false;
+        CheckForNewScore(both);
+
         gameOverMenu.SetActive(true);
+        ResetScore();
+
     }
+
+    private void ResetScore()
+    {
+    roundTime = 0.0f;
+    roundTimeP1 = 0.0f;
+    roundTimeP2 = 0.0f;
+    currentSeconds = 0;
+    roundMili = 0;
+
+    roundMiliP1 = 0;
+    currentSecondsP1 = 0;
+    roundMiliP2 = 0;
+    currentSecondsP2 = 0;
+
+    bestSecondsP1 = 0;
+    bestMiliSecondsP1 = 0;
+    bestSecondsP2 = 0;
+    bestMiliSecondsP2 = 0;
+}
+    
 
     void Update()
     {
-        if (currentSeconds < 180) 
+        if (currentSeconds < 30) 
             CountRoundTime();
         else 
             EndGame();
