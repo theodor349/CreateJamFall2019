@@ -13,6 +13,8 @@ public class AudioController : MonoBehaviour
     
     private List<AudioSource> speakers = new List<AudioSource>();
     private Dictionary<string, AudioClip> clips;
+    public AudioSource Music;
+    public AudioClip BadMusic;
 
     public static void Play(Sound sound)
     {
@@ -27,7 +29,15 @@ public class AudioController : MonoBehaviour
     {
         Instance = this;
         LoadSounds();
-        Play(Sound.Test);
+        EarthProperties.RegistreLevelUpAction(LevelUp);
+    }
+
+    private void LevelUp(int level)
+    {
+        if(level != 1)
+            return;
+        Music.clip = BadMusic;
+        Music.Play();
     }
 
     private void PlaySound(string sound)

@@ -40,6 +40,7 @@ public class WaterBullet : MonoBehaviour {
                     break;
                 case "Crate":
                     hit.transform.GetComponent<ObjectLife>().Damage();
+                    AudioController.Play(Sound.Wood);
                     break;
             }
 
