@@ -71,6 +71,24 @@ public class ScoreController : MonoBehaviour
             currentSeconds ++;
             roundTime = 0;
             roundMili = 0;
+
+            if (currentSeconds == 10)
+            {
+                Vector3 newPostion = new Vector3();
+                newPostion = scoreTextSeconds.gameObject.transform.parent.localPosition;
+                newPostion.x = 103.5f;
+                scoreTextSeconds.gameObject.transform.parent.localPosition = newPostion;
+            }
+
+            if (currentSeconds == 100)
+            {
+                Vector3 newPostion = new Vector3();
+                newPostion = scoreTextSeconds.gameObject.transform.parent.localPosition;
+                newPostion.x = 110.1f;
+                scoreTextSeconds.gameObject.transform.parent.localPosition = newPostion;
+            }
+
+
         }
 
         if (roundMili < 100)
