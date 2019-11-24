@@ -37,6 +37,7 @@ public class WaterBullet : MonoBehaviour {
                     else force = -Vector3.right;
                     force *= bulletSpeed * 25;
                     pCont.rbody.velocity += force * Time.deltaTime;
+                    AudioController.Play(Sound.Death);
                     break;
                 case "Crate":
                     hit.transform.GetComponent<ObjectLife>().Damage();

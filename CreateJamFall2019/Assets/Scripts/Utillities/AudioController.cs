@@ -68,6 +68,7 @@ public class AudioController : MonoBehaviour
     {
         var s = gameObject.AddComponent<AudioSource>();
         s.spatialBlend = 0;
+        s.volume = 0.2f;
         speakers.Add(s);
         return speakers.Count - 1;
     }
