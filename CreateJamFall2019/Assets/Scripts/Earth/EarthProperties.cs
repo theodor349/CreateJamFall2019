@@ -82,7 +82,7 @@ public class EarthProperties : MonoBehaviour
     {
         ChosenSpawnable++;
         ChosenSpawnable %= SpawnableObjects.Length;
-        UiPlanetPowerSelector.updatePlanetPowerIcons();
+        UiPlanetPowerSelector.updatePlanetPowerIcons(-1);
     }
     
     public void PreviousSpawnable()
@@ -90,7 +90,7 @@ public class EarthProperties : MonoBehaviour
         ChosenSpawnable--;
         if (ChosenSpawnable < 0)
             ChosenSpawnable = SpawnableObjects.Length - 1;
-        UiPlanetPowerSelector.updatePlanetPowerIcons();
+        UiPlanetPowerSelector.updatePlanetPowerIcons(-1);
     }
 
     public static void RegistreLevelUpAction(Action<int> action)
