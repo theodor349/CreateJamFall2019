@@ -76,7 +76,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Radius: 20
-  RotationSpeed: 20
+  MaxRotaionSpeed: 20
+  RotationSpeed: 0
+  MaxRotationAcceleration: 1
   ChosenSpawnable: 0
   SpawnableObjects:
   - {fileID: 11400000, guid: 0e7818caf58319448aa2003a7c62c61c, type: 2}
