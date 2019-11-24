@@ -17,6 +17,9 @@ public class EarthProperties : MonoBehaviour
     public float[] CoolDowns;
     private UiPlanetPowerSelector UiPlanetPowerSelector;
 
+    [Header("Madness")] 
+    public int Madness = 0;
+    public int NextLevel = 50;
 
     void Start()
     {
@@ -31,12 +34,23 @@ public class EarthProperties : MonoBehaviour
 
     private void Update()
     {
+        DoMadness();
+        
         if(Input.GetAxisRaw("ScroolWheel") < 0)
             PreviousSpawnable();
         else if(Input.GetAxisRaw("ScroolWheel") > 0)
             NextSpawnable();
         
         DoCoolDowns();
+    }
+
+    private void DoMadness()
+    {
+        if (Madness >= NextLevel)
+        {
+            Debug.Log("Level Up");
+            Madness = 0;
+        }
     }
 
     public bool CanUseSpawnable()

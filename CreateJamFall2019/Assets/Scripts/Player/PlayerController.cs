@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
 
+    private ScoreController scoreController;
+
     [HideInInspector]
     public Rigidbody2D rbody;
     [HideInInspector]
@@ -25,6 +27,11 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() {
         rbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        scoreController = ScoreController.Instance;
     }
 
     void Update() {
@@ -63,6 +70,9 @@ public class PlayerController : MonoBehaviour
             rbody.position = new Vector2(0, 7);
             rbody.velocity = Vector2.zero;
             Camera.main.GetComponent<CameraShake>().Shake();
+
+            scoreController.CheckForNewScore();
+            scoreController.ResetRoundTime();
         }
     }
 

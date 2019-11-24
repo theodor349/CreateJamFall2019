@@ -156,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3671561615910636427}
   - component: {fileID: 2497445637842530734}
+  - component: {fileID: 1153812409}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged

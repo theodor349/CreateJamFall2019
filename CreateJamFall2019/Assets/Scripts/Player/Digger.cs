@@ -37,6 +37,8 @@ public class Digger : MonoBehaviour
             hit.transform.GetComponent<Vulcano>().Damage(hit.point);
         else 
             hit.transform.GetComponent<ObjectLife>().Damage();
+
+        EarthProperties.Instance.Madness++;
     }
 
     private RaycastHit2D GetHit()
