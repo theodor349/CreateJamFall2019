@@ -13,16 +13,32 @@ public class WeponSwupper : MonoBehaviour
     public SpawnableObject crate;
 
     public Item currentItem;
+    public bool IsPlayer1;
 
     private void Update()
     {
-        if (Input.GetButtonDown("P1LeftSwitch"))
+        if (IsPlayer1)
         {
-            SwapWeapon(false);
+            if (Input.GetButtonDown("P1LeftSwitch"))
+            {
+                SwapWeapon(false);
+            }
+            if (Input.GetButtonDown("P1RightSwitch"))
+            {
+                SwapWeapon(true);
+            }
         }
-        if (Input.GetButtonDown("P1RightSwitch"))
+        else
         {
-            SwapWeapon(true);
+            if (Input.GetButtonDown("P2LeftSwitch"))
+            {
+                SwapWeapon(false);
+            }
+            if (Input.GetButtonDown("P2RightSwitch"))
+            {
+                SwapWeapon(true);
+            }
+
         }
     }
 
