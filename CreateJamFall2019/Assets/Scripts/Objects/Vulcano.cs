@@ -2,7 +2,7 @@
 using System.Collections;
 using System.ComponentModel;
 using UnityEditor;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
