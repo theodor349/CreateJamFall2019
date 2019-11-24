@@ -48,7 +48,7 @@ public class EarthProperties : MonoBehaviour
 
     private void DoMadness()
     {
-        if (Madness >= NextLevel)
+        if (Madness >= NextLevel || Input.GetKeyDown(KeyCode.L))
         {
             Level++;
             Madness = 0;
