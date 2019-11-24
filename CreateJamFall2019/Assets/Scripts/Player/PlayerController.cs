@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.transform.tag == "Fireball")
         {
-            Vector2 force = playerGraphics.up * 500f;
+             Vector2 force = playerGraphics.up * 500f;
             rbody.velocity += force * Time.deltaTime;
         }
     }

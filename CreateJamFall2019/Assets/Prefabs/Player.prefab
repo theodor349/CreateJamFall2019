@@ -167,6 +167,7 @@ MonoBehaviour:
   runSpeed: 10
   stopSpeed: 20
   jumpSpeed: 7
+  playerGraphics: {fileID: 400971035}
   spriteRenderers:
   - {fileID: 9046119370811763657}
   - {fileID: 4439185671809427262}
@@ -190,10 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa60702406281d94f8d3b005d2c67c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Renderer: {fileID: 269174929301200510}
-  Gun: {fileID: 21300000, guid: acaa7b3a71f2ab34e91eadf7a012682c, type: 3}
-  Crate: {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
-  isGun: 1
+  renderer: {fileID: 269174929301200510}
+  pistolSprite: {fileID: 21300000, guid: acaa7b3a71f2ab34e91eadf7a012682c, type: 3}
+  pickaxeSprite: {fileID: 21300000, guid: bf6a396c673564e82ae8d6f8b6f494ad, type: 3}
+  crate: {fileID: 11400000, guid: 71d81df4fdae09943acc5c7ef37194f8, type: 2}
+  currentItem: 0
 --- !u!114 &8725462244426002173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +214,7 @@ MonoBehaviour:
   HitLayer:
     serializedVersion: 2
     m_Bits: 512
+  mineRate: 0.5
 --- !u!114 &89018372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +230,7 @@ MonoBehaviour:
   playerGraphics: {fileID: 400971035}
   waterBulletPrefab: {fileID: 7417303417130557562, guid: 0b0755b2aeef55748b44b9e7ba215173,
     type: 3}
-  shootCooldown: 0.2
+  rateOfFire: 0.25
 --- !u!114 &7809841392138205963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGraphics: {fileID: 400971035}
-  spawnCooldown: 0.5
+  rateOfCrate: 0.5
 --- !u!1 &4122316889451720883
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +336,7 @@ GameObject:
   - component: {fileID: 2652658394011170706}
   - component: {fileID: 269174929301200510}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +355,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400971035}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.5261202}
 --- !u!212 &269174929301200510
 SpriteRenderer:
   m_ObjectHideFlags: 0

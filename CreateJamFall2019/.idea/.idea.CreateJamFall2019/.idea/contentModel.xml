@@ -40,6 +40,7 @@
             <e p="UiPlanetPowerSelector.cs" t="Include" />
           </e>
           <e p="Utillities" t="Include">
+            <e p="AurdioController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CameraShake.cs" t="Include" />
             <e p="Despawner.cs" t="Include" />

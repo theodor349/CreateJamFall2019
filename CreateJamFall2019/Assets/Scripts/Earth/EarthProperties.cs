@@ -8,7 +8,10 @@ public class EarthProperties : MonoBehaviour
     public static EarthProperties Instance;
 
     public float Radius = 2f;
+    public float MaxRotaionSpeed = 2f;
     public float RotationSpeed = 2f;
+    public float MaxRotationAcceleration = 2f;
+    
     public int ChosenSpawnable = 0;
     public SpawnableObject[] SpawnableObjects;
     public float[] CoolDowns;
