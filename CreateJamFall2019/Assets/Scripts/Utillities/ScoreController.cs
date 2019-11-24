@@ -46,7 +46,7 @@ public class ScoreController : MonoBehaviour
     {
 
 
-        if (isPlayer1 == false)
+        if (isPlayer1)
         {
             if (bestSecondsP2 < currentSecondsP2 || bestSecondsP2 == currentSecondsP2 && bestMiliSecondsP2 < roundMiliP2)
             {
@@ -62,7 +62,7 @@ public class ScoreController : MonoBehaviour
 
                 bestScoreTextMilisecondsP2.text = roundMiliP2.ToString();
 
-                bestSecondsP2 = currentSeconds;
+                bestSecondsP2 = currentSecondsP2;
                 bestMiliSecondsP2 = roundMiliP2;
             }
         }
@@ -83,7 +83,7 @@ public class ScoreController : MonoBehaviour
 
                 bestScoreTextMilisecondsP1.text = roundMiliP1.ToString();
 
-                bestSecondsP1 = currentSeconds;
+                bestSecondsP1 = currentSecondsP1;
                 bestMiliSecondsP1 = roundMiliP1;
             }
         }
@@ -97,7 +97,7 @@ public class ScoreController : MonoBehaviour
     public void ResetRoundTime(bool isPlayer1)
     {
 
-        if (isPlayer1 == false)
+        if (isPlayer1)
         {
             roundMiliP2 = 0;
             currentSecondsP2 = 0;
@@ -207,7 +207,7 @@ public class ScoreController : MonoBehaviour
 
     void Update()
     {
-        if (currentSeconds < 30) 
+        if (currentSeconds < 10) 
             CountRoundTime();
         else 
             EndGame();

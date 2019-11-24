@@ -60,6 +60,5 @@ public class SpawnDelay : MonoBehaviour
                 }
             }
         }
-        EarthProperties.enabled = true;
     }
 }
