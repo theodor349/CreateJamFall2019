@@ -58,6 +58,10 @@ public class EarthProperties : MonoBehaviour
 
     public bool CanUseSpawnable()
     {
+        if(SpawnableObjects[ChosenSpawnable].name.Equals("Vulcano"))
+            if (!EarthPointer.Instance.VulcanoUnlocked)
+                return false;
+        
         return CoolDowns[ChosenSpawnable] <= 0;
     }
 
