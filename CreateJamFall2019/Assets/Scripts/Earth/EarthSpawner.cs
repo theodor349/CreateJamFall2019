@@ -36,6 +36,9 @@ public class EarthSpawner : MonoBehaviour
         var spawnPoint = GetSpawnPoint(obj);
         if (obj.SpawnOnPlanet && spawnPoint == Vector3.zero) return;
         
+        if(obj.name.Equals("Crate"))
+            AudioController.Play(Sound.Crate);
+        
         var go = Instantiate(obj.Prefab, spawnPoint, Quaternion.identity);
         SetupObject(obj, go);
         _earthProperties.UseSpawnable();

@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class GameOver : MonoBehaviour
         scoreController = ScoreController.Instance;
     }
 
+    private void Update()
+    {
+        if (Input.anyKey)
+            Application.LoadLevel(Application.loadedLevel);
+    }
+
     private void OnEnable()
     {
         FillScoreBoard();
@@ -26,20 +34,21 @@ public class GameOver : MonoBehaviour
 
     private void FillScoreBoard()
     {
-        if (scoreController.bestSecondsP1 > scoreController.bestSecondsP2)
+        if(scoreController == null)
+            scoreController = ScoreController.Instance;
+        
+        if (scoreController.bestSecondsP1 + scoreController.bestMiliSecondsP1 / 1000f > scoreController.bestSecondsP2 + scoreController.bestMiliSecondsP2 / 1000f)
         {
             winnerName.text = "Player 1";
             winndersSeconds.text = scoreController.bestSecondsP1.ToString();
             winnersMiliSeconds.text = scoreController.bestMiliSecondsP1.ToString();
         }
-
-        else if (scoreController.bestSecondsP1 < scoreController.bestSecondsP2)
+        else if (scoreController.bestSecondsP1 + scoreController.bestMiliSecondsP1 / 1000f < scoreController.bestSecondsP2 + scoreController.bestMiliSecondsP2 / 1000f)
         {
             winnerName.text = "Player 2";
             winndersSeconds.text = scoreController.bestSecondsP2.ToString();
             winnersMiliSeconds.text = scoreController.bestMiliSecondsP2.ToString();
         }
-
         else
         {
             winnerName.text = "Its a draw";

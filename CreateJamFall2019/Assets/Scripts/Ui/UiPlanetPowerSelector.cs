@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -26,6 +27,7 @@ public class UiPlanetPowerSelector : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        var i = Instance;
     }
 
     public void updatePlanetPowerIcons(int level)

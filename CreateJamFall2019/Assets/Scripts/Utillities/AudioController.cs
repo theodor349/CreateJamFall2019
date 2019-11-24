@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using Random = UnityEngine.Random;
 
-public enum Sound {Test, Wood}
+public enum Sound {Test, Wood, Crate, Death, Vulcano, Crash, Mine}
 public class AudioController : MonoBehaviour
 {
     public static AudioController Instance;
@@ -20,7 +20,6 @@ public class AudioController : MonoBehaviour
         if (sound == Sound.Wood)
             s += ((int)Random.Range(1, 3)).ToString();
             
-        Debug.Log(s);
         Instance.PlaySound(s);
     }
     

@@ -49,5 +49,6 @@ public class CrateThrow : MonoBehaviour
 
         nextSpawnTime = Time.time + rateOfCrate;
         Instantiate(swapper.crate.Prefab, pos, playerGraphics.rotation);
+        AudioController.Play(Sound.Crate);
     }
 }
