@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using Random = UnityEngine.Random;
 
-public enum Sound {Test, Wood, Crate, Death, Vulcano, Crash, Mine}
+public enum Sound {Test, Wood, Crate, Death, Vulcano, Crash, Mine, Jump, Shoot}
 public class AudioController : MonoBehaviour
 {
     public static AudioController Instance;
@@ -34,6 +34,12 @@ public class AudioController : MonoBehaviour
     {
         var a = speakers[GetSpeaker()];
         a.clip = clips[sound];
+
+        if (sound.Equals(Sound.Death.ToString()) || sound.Equals(Sound.Jump.ToString()))
+            a.pitch = Random.Range(0.8f, 2f);
+        else
+            a.pitch = 1;
+        
         a.Play();
     }
 
@@ -50,7 +56,9 @@ public class AudioController : MonoBehaviour
 
     private int SpawnSpeaker()
     {
-        speakers.Add(gameObject.AddComponent<AudioSource>());
+        var s = gameObject.AddComponent<AudioSource>();
+        s.spatialBlend = 0;
+        speakers.Add(s);
         return speakers.Count - 1;
     }
 

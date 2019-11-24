@@ -61,13 +61,18 @@ public class PlayerController : MonoBehaviour
             v.x += stopSpeed * Time.deltaTime;
 
         if (isGrounded && wishJump) {
+            AudioController.Play(Sound.Jump);
             wishJump = false;
             v.y = jumpSpeed;
         }
 
         rbody.velocity = v;
 
-        if(rbody.position.y < -20) {
+        if(rbody.position.y < -18)
+            AudioController.Play(Sound.Death);
+        
+        if(rbody.position.y < -20) 
+        {
             rbody.position = new Vector2(0, 7);
             rbody.velocity = Vector2.zero;
             Camera.main.GetComponent<CameraShake>().Shake();

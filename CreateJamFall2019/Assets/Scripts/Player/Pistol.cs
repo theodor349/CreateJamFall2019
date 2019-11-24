@@ -59,6 +59,7 @@ public class Pistol : MonoBehaviour {
 
         ammo--;
         nextShootTime = Time.time + rateOfFire;
+        AudioController.Play(Sound.Shoot);
         GameObject bullet = Instantiate(waterBulletPrefab, pos, playerGraphics.rotation);
         WaterBullet bulletScript = bullet.GetComponent<WaterBullet>();
         bulletScript.flyLeft = playerController.isTurnedLeft;

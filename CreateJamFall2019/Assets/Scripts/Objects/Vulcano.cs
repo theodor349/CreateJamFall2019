@@ -67,6 +67,7 @@ public class Vulcano : MonoBehaviour
 
     private void Erupt()
     {
+        AudioController.Play(Sound.Vulcano);
         var go = Instantiate(FireBall, EruptPoint);
         go.transform.parent = transform;
         var rb = go.GetComponent<Rigidbody2D>();
