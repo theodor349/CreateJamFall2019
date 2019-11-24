@@ -231,6 +231,8 @@ MonoBehaviour:
   waterBulletPrefab: {fileID: 7417303417130557562, guid: 0b0755b2aeef55748b44b9e7ba215173,
     type: 3}
   rateOfFire: 0.25
+  ammo: 20
+  waterLevel: {fileID: 0}
 --- !u!114 &7809841392138205963
 MonoBehaviour:
   m_ObjectHideFlags: 0
