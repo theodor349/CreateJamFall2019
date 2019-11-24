@@ -12,10 +12,18 @@ public class Digger : MonoBehaviour
     public Transform GunPoint;
     public LayerMask HitLayer;
 
+    [SerializeField] private float mineRate = 0.5f;
+    private float nextMineTime;
+
     private void Update()
     {
-        if (Input.GetButtonDown("P1Mine"))
-            Mine();
+        if (weapon.currentItem == Item.Pickaxe)
+        {
+            if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextMineTime)
+            {
+                nextMineTime = Time.time + mineRate;
+            }
+        }
     }
 
     private void Mine()

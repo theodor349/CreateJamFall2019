@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pistol : MonoBehaviour {
     [SerializeField] private Transform playerGraphics;
     [SerializeField] private GameObject waterBulletPrefab;
-    [SerializeField] private float shootCooldown = 0.25f;
+    [SerializeField] private float rateOfFire = 0.25f;
 
     private float nextShootTime;
     private PlayerController playerController;
@@ -17,7 +17,7 @@ public class Pistol : MonoBehaviour {
     }
 
     private void Update() {
-        if(swapper.isGun) {
+        if(swapper.currentItem == Item.Pistol) {
             if((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextShootTime) {
                 Vector3 pos = transform.position;
                 if (playerController.isTurnedLeft)
@@ -25,7 +25,7 @@ public class Pistol : MonoBehaviour {
                 else
                     pos += playerGraphics.right * -0.4f;
 
-                nextShootTime = Time.time + shootCooldown;
+                nextShootTime = Time.time + rateOfFire;
                 GameObject bullet = Instantiate(waterBulletPrefab, pos, playerGraphics.rotation);
                 WaterBullet bulletScript = bullet.GetComponent<WaterBullet>();
                 bulletScript.flyLeft = playerController.isTurnedLeft;

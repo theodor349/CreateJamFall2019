@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrateThrow : MonoBehaviour
 {
     [SerializeField] private Transform playerGraphics;
-    [SerializeField] private float spawnCooldown = 0.5f;
+    [SerializeField] private float rateOfCrate = 0.5f;
 
     private float nextSpawnTime;
     private PlayerController playerController;
@@ -19,7 +19,7 @@ public class CrateThrow : MonoBehaviour
 
     private void Update()
     {
-        if (!swapper.isGun)
+        if (swapper.currentItem == Item.Crate)
         {
             if ((Input.GetButtonDown("P1Shoot") || Input.GetAxisRaw("P1Trigger") == 1) && Time.time > nextSpawnTime)
             {
@@ -29,8 +29,8 @@ public class CrateThrow : MonoBehaviour
                 else
                     pos += playerGraphics.right * -0.5f;
 
-                nextSpawnTime = Time.time + spawnCooldown;
-                Instantiate(swapper.Crate.Prefab, pos, playerGraphics.rotation);
+                nextSpawnTime = Time.time + rateOfCrate;
+                Instantiate(swapper.crate.Prefab, pos, playerGraphics.rotation);
             }
         }
     }
