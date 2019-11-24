@@ -19,7 +19,8 @@ public class UiPlanetPowerSelector : MonoBehaviour
     void Start()
     {
         earthProperties = EarthProperties.Instance;
-        updatePlanetPowerIcons();
+        updatePlanetPowerIcons(-1);
+        EarthProperties.RegistreLevelUpAction(updatePlanetPowerIcons);
     }
 
     private void Awake()
@@ -27,22 +28,33 @@ public class UiPlanetPowerSelector : MonoBehaviour
         Instance = this;
     }
 
-    public void updatePlanetPowerIcons()
+    public void updatePlanetPowerIcons(int level)
     {
-        if (earthProperties.ChosenSpawnable == 0)
-            leftPower.sprite = earthProperties.SpawnableObjects[2].Icon;
+        int index = earthProperties.ChosenSpawnable;
+        int max = earthProperties.SpawnableObjects.Length;
 
-        else
-            leftPower.sprite = earthProperties.SpawnableObjects[earthProperties.ChosenSpawnable -1].Icon;
+        var temp = earthProperties.SpawnableObjects[index];
+        currentPower.sprite = temp.Icon;
+        if(temp.name.Equals("Vulcano") && earthProperties.Level < EarthPointer.Instance.VulcanoLevel)
+            currentPower.color = Color.black;
+        else 
+            currentPower.color = Color.white;
+        
+        index = Next(index, max);
+        temp = earthProperties.SpawnableObjects[index];
+        rightPower.sprite = temp.Icon;
+        if(temp.name.Equals("Vulcano") && earthProperties.Level < EarthPointer.Instance.VulcanoLevel)
+            rightPower.color = Color.black;
+        else 
+            rightPower.color = Color.white;
 
-        currentPower.sprite = earthProperties.SpawnableObjects[earthProperties.ChosenSpawnable].Icon;
-
-        if(earthProperties.ChosenSpawnable == 2)
-            rightPower.sprite = earthProperties.SpawnableObjects[0].Icon;
-
-        else
-            rightPower.sprite = earthProperties.SpawnableObjects[earthProperties.ChosenSpawnable + 1].Icon;
-
+        index = Next(index, max);
+        temp = earthProperties.SpawnableObjects[index];
+        leftPower.sprite = temp.Icon;
+        if(temp.name.Equals("Vulcano") && earthProperties.Level < EarthPointer.Instance.VulcanoLevel)
+            leftPower.color = Color.black;
+        else 
+            leftPower.color = Color.white;
     }
 
     private void Update()
