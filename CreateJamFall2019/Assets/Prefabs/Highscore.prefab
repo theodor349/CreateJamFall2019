@@ -299,7 +299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5, y: -3.1}
+  m_AnchoredPosition: {x: -1, y: -3.1}
   m_SizeDelta: {x: 100, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4592406643768793828
@@ -2605,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2, y: -10.4}
+  m_AnchoredPosition: {x: -0.5, y: -10.4}
   m_SizeDelta: {x: 100, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2009329688710604649
@@ -3382,7 +3382,9 @@ MonoBehaviour:
   bestScoreTextMilisecondsP1: {fileID: 3445510345353340534}
   bestScoreTextSecondsP2: {fileID: 2089143061156424905}
   bestScoreTextMilisecondsP2: {fileID: 8788088116515325731}
-  currentPlanetPlayerText: {fileID: 0}
+  gameOverMenu: {fileID: 0}
+  bestSecondsP1: 0
+  bestMiliSecondsP1: 0
   bestSecondsP2: 0
   bestMiliSecondsP2: 0
 --- !u!1 &7364545034033726869
