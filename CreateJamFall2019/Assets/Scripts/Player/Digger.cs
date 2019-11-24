@@ -47,8 +47,11 @@ public class Digger : MonoBehaviour
         
         if(hit.transform.tag.Equals("Vulcano"))
             hit.transform.GetComponent<Vulcano>().Damage(hit.point);
-        else 
+        else
+        {
             hit.transform.GetComponent<ObjectLife>().Damage();
+            AudioController.Play(Sound.Wood);
+        }
 
         EarthProperties.Instance.Madness++;
     }

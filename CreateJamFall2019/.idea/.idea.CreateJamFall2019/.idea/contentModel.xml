@@ -19,6 +19,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Earth" t="Include">
+            <e p="EarthColorChanger.cs" t="Include" />
             <e p="EarthPointer.cs" t="Include" />
             <e p="EarthProperties.cs" t="Include" />
             <e p="EarthSpawner.cs" t="Include" />
@@ -53,6 +54,7 @@
             <e p="PlayerSpriteUpright.cs" t="Include" />
             <e p="RotationFall.cs" t="Include" />
             <e p="ScoreController.cs" t="Include" />
+            <e p="SpawnDelay.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
             <e p="WaterBullet.cs" t="Include" />
           </e>

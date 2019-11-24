@@ -52,6 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2810625742963141198}
+  - component: {fileID: 1840454840}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -75,6 +76,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840454840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810625742963141199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1304639e672103c4fb96d8e544c62e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 2
+  Spawn:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2810625743580486788
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +147,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aa4f926f79a9c0346a43c2b549c05baa, type: 2}
   CoolDowns: []
   Madness: 0
-  NextLevel: 1
+  NextLevel: 10
   Level: 0
 --- !u!114 &3570493392006606748
 MonoBehaviour:

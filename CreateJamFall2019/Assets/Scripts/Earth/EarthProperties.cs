@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class EarthProperties : MonoBehaviour
@@ -26,6 +27,14 @@ public class EarthProperties : MonoBehaviour
     void Start()
     {
         UiPlanetPowerSelector = UiPlanetPowerSelector.Instance;
+        RegistreLevelUpAction(NewLevel);
+    }
+
+    private void NewLevel(int lvl)
+    {
+        NextLevel = 10 + Level * 5;
+        MaxRotaionSpeed = 10 + (float)Math.Pow(Level,  1.1f);
+        MaxRotationAcceleration = 1 + lvl * 8;
     }
 
     private void Awake()
