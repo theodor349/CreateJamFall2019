@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365753512470470246}
   - component: {fileID: 7831739755412522932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7529030511593805029}
   - component: {fileID: 7020215797503426928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: WaterBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
